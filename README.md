@@ -9,3 +9,5 @@ Team Member:
 4. (ML) M292DSY3228 – Dyah Ayu Astuti – Universitas Nusa Mandiri
 5. (ML) M309DSY1869 – Shafa Meira Wahyono – Universitas Pendidikan Indonesia
 6. (ML) M193DKY4596 – Nur Azizah Munir – Universitas Islam Negeri Maulana Malik Ibrahim Malang
+
+dataset: https://www.kaggle.com/code/tannergi/book-recommendation-system/input?select=ratings.csv
