@@ -5,10 +5,14 @@ const response = require('../config/response')
 
 exports.regis = (data) => 
     new Promise((resolve, reject) => {
-        userModel.findOne({email: data.email})
+        userModel.findOne({$or: [{email: data.email}, {username: data.username}]})
             .then(user => {
                 if (user){
-                    resolve(response.ErrorMessage('Email has been used'))
+                    if (user.email === data.email) {
+                        resolve(response.ErrorMessage('Email has been used'))
+                    } else {
+                        resolve(response.ErrorMessage('Username has been used'))
+                    }
                 }else {
                     bcrypt.hash(data.password, 10, (err, hash) => {
                         if (err) {
@@ -26,7 +30,7 @@ exports.regis = (data) =>
 
 exports.login = (data) => 
     new Promise((resolve, reject) => {
-    userModel.findOne({username: data.username})
+    userModel.findOne({email: data.email})
         .then(user => {
             if(user){
                 if(bcrypt.compareSync(data.password, user.password)){
@@ -35,7 +39,7 @@ exports.login = (data) =>
                     reject(response.ErrorMessage('Wrong Password'))
                 }
             }else {
-                reject(response.ErrorMessage('Username not found'))
+                reject(response.ErrorMessage('Email not found'))
             }
         })
     })
