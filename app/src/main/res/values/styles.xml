@@ -1,0 +1,14 @@
+<resources>
+    <style name="Widget.Theme.BukuKu.ActionBar.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.BukuKu.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="BottomNavTextStyle">
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+</resources>

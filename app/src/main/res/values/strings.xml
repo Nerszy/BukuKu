@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BukuKu</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="bukuku">BukuKu</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="need_register">Need Register?</string>
+    <string name="choose_3_fav">Choose your\ntop 3 favorite</string>
+    <string name="genre">Genre!</string>
+    <string name="next"><![CDATA[Next >]]></string>
+    <string name="genre1">Genre</string>
+    <string name="book">Book!</string>
+    <string name="book_title">Book Title</string>
+    <string name="searchbar_hint">Search</string>
+    <string name="i_wanna_read">I want to read…</string>
+    <string name="chapter_1_d">Chapter %1$d —></string>
+    <string name="_34_complete">34% Complete</string>
+    <string name="lorem">(sneakpeak of the latest chapter) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</string>
+    <string name="see_more">see more on your library…</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="discover_more">discover more...</string>
+    <string name="home">Home</string>
+    <string name="library">Library</string>
+    <string name="discover">Discover</string>
+    <string name="profile">Profile</string>
+    <string name="last_selected_book">Last Selected Book</string>
+</resources>
