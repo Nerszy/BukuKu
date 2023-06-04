@@ -1,7 +1,7 @@
 const userControllers = require("../controllers/user-controllers")
 const routes = require("express").Router()
 
-    routes.post('/regis', (req, res) => {
+    routes.post('/', (req, res) => {
         userControllers.regis(req.body)
             .then((result)=> res.json(result))
             .catch((err) => res.json(err)) 
