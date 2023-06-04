@@ -30,7 +30,7 @@ exports.regis = (data) =>
 
 exports.login = (data) => 
     new Promise((resolve, reject) => {
-    userModel.findOne({email: data.email})
+    userModel.findOne({username: data.username})
         .then(user => {
             if(user){
                 if(bcrypt.compareSync(data.password, user.password)){
@@ -39,7 +39,7 @@ exports.login = (data) =>
                     reject(response.ErrorMessage('Wrong Password'))
                 }
             }else {
-                reject(response.ErrorMessage('Email not found'))
+                reject(response.ErrorMessage('Username not found'))
             }
         })
     })
