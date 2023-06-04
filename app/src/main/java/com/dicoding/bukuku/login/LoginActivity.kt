@@ -1,9 +1,11 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import com.dicoding.bukuku.InitialGenreActivity
+import com.dicoding.bukuku.RegisterActivity
 import com.dicoding.bukuku.databinding.ActivityLoginBinding
 
 @Suppress("DEPRECATION")
@@ -20,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         supportActionBar?.hide()
 
-        binding.btnLogin.setOnClickListener{
+        binding.btnLogin.setOnClickListener {
             val intent = Intent(this, InitialGenreActivity::class.java)
             startActivity(intent)
             finish()

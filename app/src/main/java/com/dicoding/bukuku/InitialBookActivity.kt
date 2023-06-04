@@ -1,10 +1,10 @@
 package com.dicoding.bukuku
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.bukuku.databinding.ActivityInitialBookBinding
 
@@ -52,15 +52,49 @@ class InitialBookActivity : AppCompatActivity() {
             val selectedBooks = getSelectedBooks()
             Toast.makeText(this, selectedBooks, Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 
     private fun getBooksByGenre(genre: String): List<String> {
         // Buat daftar judul buku berdasarkan genre
         val books: List<String> = when (genre) {
-            "Action" -> listOf("Book 1", "Book 2", "Book 3", "Book 4", "Book 5", "Book 6", "Book 7", "Book 8", "Book 9", "Book 10")
-            "Horror" -> listOf("Book A", "Book B", "Book C", "Book D", "Book E", "Book F", "Book G", "Book H", "Book I", "Book J")
-            "Comedy" -> listOf("Book X", "Book Y", "Book Z", "Book P", "Book Q", "Book R", "Book S", "Book T", "Book U", "Book V")
+            "Action" -> listOf(
+                "Book 1",
+                "Book 2",
+                "Book 3",
+                "Book 4",
+                "Book 5",
+                "Book 6",
+                "Book 7",
+                "Book 8",
+                "Book 9",
+                "Book 10"
+            )
+            "Horror" -> listOf(
+                "Book A",
+                "Book B",
+                "Book C",
+                "Book D",
+                "Book E",
+                "Book F",
+                "Book G",
+                "Book H",
+                "Book I",
+                "Book J"
+            )
+            "Comedy" -> listOf(
+                "Book X",
+                "Book Y",
+                "Book Z",
+                "Book P",
+                "Book Q",
+                "Book R",
+                "Book S",
+                "Book T",
+                "Book U",
+                "Book V"
+            )
             else -> emptyList()
         }
         return books

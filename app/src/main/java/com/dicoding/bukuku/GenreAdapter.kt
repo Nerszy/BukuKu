@@ -6,11 +6,13 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.bukuku.databinding.ItemRowGenreBinding
 
-class GenreAdapter(private val genres: List<String>) : RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
+class GenreAdapter(private val genres: List<String>) :
+    RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
 
     private val selectedGenre = mutableSetOf<String>()
 
-    inner class GenreViewHolder(val binding: ItemRowGenreBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class GenreViewHolder(val binding: ItemRowGenreBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(genres: String) {
             with(binding) {
                 tvGenre.text = genres
@@ -27,8 +29,12 @@ class GenreAdapter(private val genres: List<String>) : RecyclerView.Adapter<Genr
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GenreAdapter.GenreViewHolder {
-        val binding = ItemRowGenreBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): GenreAdapter.GenreViewHolder {
+        val binding =
+            ItemRowGenreBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return GenreViewHolder(binding)
     }
 
@@ -47,7 +53,11 @@ class GenreAdapter(private val genres: List<String>) : RecyclerView.Adapter<Genr
                     selectedGenre.add(genre)
                 } else {
                     // Show a message indicating that only 3 genres can be selected
-                    Toast.makeText(holder.itemView.context, "Only 3 genres can be selected", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        holder.itemView.context,
+                        "Only 3 genres can be selected",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 

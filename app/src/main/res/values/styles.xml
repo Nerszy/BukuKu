@@ -1,4 +1,5 @@
 <resources>
+
     <style name="Widget.Theme.BukuKu.ActionBar.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>
@@ -9,6 +10,7 @@
     </style>
 
     <style name="BottomNavTextStyle">
-        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

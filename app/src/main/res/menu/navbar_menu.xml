@@ -2,21 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/iconHome"
+        android:fontFamily="@font/poppins"
         android:icon="@drawable/home"
         android:title="@string/home" />
 
     <item
         android:id="@+id/iconLibrary"
+        android:fontFamily="@font/poppins"
         android:icon="@drawable/library"
         android:title="@string/library" />
 
     <item
         android:id="@+id/iconDiscover"
+        android:fontFamily="@font/poppins"
         android:icon="@drawable/ic_search"
-        android:title="@string/discover"/>
+        android:title="@string/discover" />
 
     <item
         android:id="@+id/iconProfile"
+        android:fontFamily="@font/poppins"
         android:icon="@drawable/profile"
         android:title="@string/profile" />
 

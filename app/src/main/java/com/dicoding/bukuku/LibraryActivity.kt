@@ -1,7 +1,7 @@
 package com.dicoding.bukuku
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.bukuku.databinding.ActivityLibraryBinding
 
 class LibraryActivity : AppCompatActivity() {

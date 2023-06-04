@@ -1,170 +1,170 @@
 [
-    {
-        "id": 1,
-        "books_id": "3",
-        "title": "Harry Potter and the Sorcerer's Stone",
-        "url_playbook":"https://play.google.com/store/books/details/John_Williams_Harry_Potter_and_the_Sorcerer_s_Ston?id=q0nABgAAQBAJhttps://play.google.com/store/books/details/John_Williams_Harry_Potter_and_the_Sorcerer_s_Ston?id=q0nABgAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/q0nABgAAQBAJ?fife=w480-h690",
-        "synopsis":"This instrumental series contains selected themes from the box office sensation,Harry Potter and the Sorcerer's Stone",
-        "price":"$6.53"
-    },
-    {
-        "id": 2,
-        "books_id": "41865",
-        "title": "Twilight: Twilight, Book 1",
-        "url_playbook": "https://play.google.com/store/books/details/Stephenie_Meyer_Twilight?id=lGjFtMRqp_YC",
-        "url_image":"https://books.google.com/books/content/images/frontcover/lGjFtMRqp_YC?fife=w480-h690",
-        "synopsis":"When 17 year old Isabella Swan moves to Forks, Washington to live with her father she expects that her new life will be as dull as the town.<br/><br/>But in spite of her awkward manner and low expectations, she finds that her new classmates are drawn to this pale, dark-haired new girl in town. But not, it seems, the Cullen family. These five adopted brothers and sisters obviously prefer their own company and will make no exception for Bella. <br/><br/>Bella is convinced that Edward Cullen in particular hates her, but she feels a strange attraction to him, although his hostility makes her feel almost physically ill. He seems determined to push her away - until, that is, he saves her life from an out of control car. <br/><br/>Bella will soon discover that there is a very good reason for Edward's coldness. He, and his family, are vampires - and he knows how dangerous it is for others to get too close.",
-        "price":"$10.70"
-    },
-    {
-        "id": 3,
-        "books_id": "2657",
-        "title": "To Kill a Mockingbird",
-        "url_playbook":"https://play.google.com/store/books/details/Harper_Lee_To_Kill_a_Mockingbird?id=PGR2AwAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/PGR2AwAAQBAJ?fife=w480-h690",
-        "synopsis":"Voted America's Best-Loved Novel in PBS's The Great American Read<p>Harper Lee's Pulitzer Prize-winning masterwork of honor and injustice in the deep South—and the heroism of one man in the face of blind and violent hatred</p><p>One of the most cherished stories of all time, To Kill a Mockingbird has been translated into more than forty languages, sold more than forty million copies worldwide, served as the basis for an enormously popular motion picture, and was voted one of the best novels of the twentieth century by librarians across the country. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father—a crusading local lawyer—risks everything to defend a black man unjustly accused of a terrible crime.",
-        "price":"$12.51"
-    },
-    {
-        "id": 4,
-        "books_id": "4671",
-        "url_playbook":"https://play.google.com/store/books/details/F_Scott_Fitzgerald_The_Great_Gatsby?id=Z4T7DwAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/Z4T7DwAAQBAJ?fife=w480-h690",
-        "synopsis":"<b>The classic novel that continues to haunt our understanding of ambition, love, entitlement, and the American Dream—with an exclusive discussion guide and an introduction by Pulitzer Prize–winning critic Wesley Morris<br/><br/>One of the Modern Library 100 Best Novels of the Twentieth Century</b><br/>  <br/>Nick Carraway is an aspiring writer, his cousin, Daisy, is married to the fabulously wealthy Tom Buchanan. Their neighbor, Jay Gatsby, throws extravagant and extraordinary parties in the exclusive and hallowed neighborhood of West Egg. The entanglements between these four characters form the backbone of F. Scott Fitzgerald’s greatest work.<br/><br/>When it was first published in 1925, <i>The Great Gatsby</i> was heralded “a mystical, glamorous story of today” (<i>The New York Times</i>). Since then, the story of Jay Gatsby and his love for the treacherous, effervescent Daisy Buchanan has become a staple in high school and college classrooms, a beloved favorite of readers everywhere, and the #2 entry in the Modern Library’s own list of the best novels of the twentieth century.",
-        "price":"$7.04"
-    },
-    {
-        "id": 5,
-        "books_id": "11870085",
-        "title": "The Fault in Our Stars",
-        "url_playbook":"https://play.google.com/store/books/details/John_Green_The_Fault_in_Our_Stars?id=UzqVUdEtLDwC",
-        "url_image":"https://books.google.com/books/content/images/frontcover/UzqVUdEtLDwC?fife=w480-h690",
-        "synopsis":"<b>The beloved, #1 global bestseller by John Green, author of <i>The Anthropocene Reviewed </i>and <i>Turtles All the Way Down</i></b><br/><br/><i>“John Green is one of the best writers alive.” –E. Lockhart, #1 bestselling author of </i>We Were Liars<br/><br/><i>“The greatest romance story of this decade.″ –</i>Entertainment Weekly<br/><br/>#1 New York Times Bestseller • #1 Wall Street Journal Bestseller • #1 USA Today Bestseller • #1 International Bestseller<br/><br/>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel’s story is about to be completely rewritten.<br/><br/>From John Green, #1 bestselling author of <i>The Anthropocene Reviewed</i> and <i>Turtles All the Way Down, The Fault in Our Stars </i>is insightful, bold, irreverent, and raw. It brilliantly explores the funny, thrilling, and tragic business of being alive and in love.",
-        "price":"$11.02"
-    },
-    {
-        "id": 6,
-        "books_id": "5907",
-        "title": "The Hobbit",
-        "url_playbook":"https://play.google.com/store/books/details/J_R_R_Tolkien_The_Hobbit?id=U799AY3yfqcC",
-        "url_image":"https://books.google.com/books/content/images/frontcover/U799AY3yfqcC?fife=w480-h690",
-        "synopsis":"This is the story of how a Baggins had an adventure, and found himself doing and saying things altogether unexpected... <p> ‘A flawless masterpiece’<br/>The Times </p> <p>Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon...</p> <p>The prelude to THE LORD OF THE RINGS, THE HOBBIT has sold many millions of copies since its publication in 1937, establishing itself as one of the most beloved and influential books of the twentieth century.</p>",
-        "price":"$8.44"
-    },
-    {
-        "id": 7,
-        "books_id": "5107",
-        "title": "The Catcher in the Rye",
-        "url_playbook":"https://play.google.com/store/books/details/J_D_Salinger_The_Catcher_in_the_Rye?id=mZunDwAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/mZunDwAAQBAJ?fife=w480-h690",
-        "synopsis":"<b>'If you really want to hear about it, the first thing you'll probably want to know is where I was born and what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don't feel like going into it, if you want to know the truth.'</b><br/><br/>The first of J. D. Salinger's four books to be published, <i>The Catcher in the Rye</i> is one of the most widely read and beloved of all contemporary American novels.<br/><br/>'The handbook of the adolescent heart' <i>The New Yorker</i>",
-        "price":"$11.25"
-    },
-    {
-        "id": 8,
-        "books_id": "77203",
-        "title": "The Kite Runner",
-        "url_playbook":"https://play.google.com/store/books/details/Khaled_Hosseini_The_Kite_Runner?id=9Q0_5ogipFsC",
-        "url_image":"https://books.google.com/books/content/images/frontcover/9Q0_5ogipFsC?fife=w480-h690",
-        "synopsis":"<b>The #1 <i>New York Times</i> bestselling novel beloved by millions of readers the world over.<br/><br/>“A vivid and engaging story that reminds us how long his people [of Afghanistan] have been struggling to triumph over the forces of violence—forces that continue to threaten them even today.\"\" –<i>New York Times Book Review</i></b><br/>  <br/> The unforgettable, heartbreaking story of the unlikely friendship between a wealthy boy and the son of his father’s servant, caught in the tragic sweep of history, <i>The Kite Runner</i> transports readers to Afghanistan at a tense and crucial moment of change and destruction. A powerful story of friendship, it is also about the power of reading, the price of betrayal, and the possibility of redemption, and an exploration of the power of fathers over sons—their love, their sacrifices, their lies.<br/>  <br/> Since its publication in 2003 <i>Kite Runner</i> has become a beloved, one-of-a-kind classic of contemporary literature, touching millions of readers, and launching the career of one of America's most treasured writers.",
-        "price":"$15.42"
-    },
-    {
-        "id": 9,
-        "books_id": "5470",
-        "title": "1984",
-        "url_playbook":"https://play.google.com/store/books/details/George_Orwell_1984?id=kotPYEqx7kMC",
-        "url_image":"https://books.google.com/books/content/images/frontcover/kotPYEqx7kMC?fife=w480-h690",
-        "synopsis":"A PBS Great American Read Top 100 Pick<br/><br/> With extraordinary relevance and renewed popularity, George Orwell’s 1984 takes on new life in this edition.<br/><br/> “Orwell saw, to his credit, that the act of falsifying reality is only secondarily a way of changing perceptions. It is, above all, a way of asserting power.”—The New Yorker<br/>  <br/> In 1984, London is a grim city in the totalitarian state of Oceania where Big Brother is always watching you and the Thought Police can practically read your mind. Winston Smith is a man in grave danger for the simple reason that his memory still functions. Drawn into a forbidden love affair, Winston finds the courage to join a secret revolutionary organization called The Brotherhood, dedicated to the destruction of the Party. Together with his beloved Julia, he hazards his life in a deadly match against the powers that be.<br/><br/> Lionel Trilling said of Orwell’s masterpiece, “1984 is a profound, terrifying, and wholly fascinating book. It is a fantasy of the political future, and like any such fantasy, serves its author as a magnifying device for an examination of the present.” Though the year 1984 now exists in the past, Orwell’s novel remains an urgent call for the individual willing to speak truth to power.",
-        "price":"$16.20"
-    },
-    {
-        "id": 10,
-        "books_id": "7613",
-        "title": "Animal Farm",
-        "url_playbook":"https://play.google.com/store/books/details/George_Orwell_Animal_Farm?id=o8rrDwAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/o8rrDwAAQBAJ?fife=w480-h690",
-        "synopsis":"All animals are equal but some animals are more equal than others.It's just an ordinary farm - until the animals revolt. They get rid of the irresponsible farmer. The other animals are sure that life is improving, but as systems are replaced and half-truths are retold, a new hierarchy emerges . . .Orwell's tale of propaganda, power and greed has never felt more pertinent.With an exciting new cover and inside illustrations by superstar Chris Mould.",
-        "price":"$6.74"
-    },
-    {
-        "id": 11,
-        "books_id": "48855",
-        "url_playbook":"https://play.google.com/store/books/details/Anne_Frank_The_Diary_of_a_Young_Girl?id=kRE8xxCmUcMC",
-        "url_image":"https://books.google.com/books/content/images/frontcover/kRE8xxCmUcMC?fife=w480-h690",
-        "synopsis":"<b>THE DEFINITIVE EDITION <b>•</b> Discovered in the attic in which she spent the last years of her life, Anne Frank’s remarkable diary has since become a world classic—a powerful reminder of the horrors of war and an eloquent testament to the human spirit.<br/></b><br/><b>Updated for the 75th Anniversary of the <i>Diary</i>’s first publication with a new introduction by Nobel Prize–winner Nadia Murad<br/><br/>“The single most compelling personal account of the Holocaust ... remains astonishing and excruciating.”—<i>The New York Times Book Review</i></b><br/><br/>In 1942, with Nazis occupying Holland, a thirteen-year-old Jewish girl and her family fled their home in Amsterdam and went into hiding. For the next two years, until their whereabouts were betrayed to the Gestapo, they and another family lived cloistered in the “Secret Annex” of an old office building. Cut off from the outside world, they faced hunger, boredom, the constant cruelties of living in confined quarters, and the ever-present threat of discovery and death. In her diary Anne Frank recorded vivid impressions of her experiences during this period. By turns thoughtful, moving, and amusing, her account offers a fascinating commentary on human courage and frailty and a compelling self-portrait of a sensitive and spirited young woman whose promise was tragically cut short.",
-        "price":"$13.21"
-    },
-    {
-        "id": 12,
-        "books_id": "5",
-        "url_playbook":"https://play.google.com/store/books/details/Keith_Whittington_Harry_Potter_and_the_Prisoner_of?id=4xQ-CQAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/4xQ-CQAAQBAJ?fife=w480-h690",
-        "synopsis":"Harry Potter and the Prisoner of Azkaban is about a killer who breaks out of the prison in order to finish what he started years ago — to kill Harry Potter. Our unit provides teachers with a highly structured format for teaching language arts as students develop a love for reading longer materials like novels. Various areas such as reading comprehension, vocabulary development, spelling, grammar, and writing are all entwined in this integrated approach, eliminating the need for teaching these skills separately. This Novel Study provides a teacher and student section with a variety of activities, chapter questions and answer key to create a well-rounded lesson plan.",
-        "price":"$9.74"
-    },
-    {
-        "id": 13,
-        "books_id": "2",
-        "title": "Harry Potter and the Order of the Phoenix by J.K. Rowling (Book Analysis): Detailed Summary, Analysis and Reading Guide",
-        "url_playbook":"https://play.google.com/store/books/details/Bright_Summaries_Harry_Potter_and_the_Order_of_the?id=b8l0DwAAQBAJ        ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/b8l0DwAAQBAJ?fife=w480-h690",
-        "synopsis":"<b>Unlock the more straightforward side of <i>Harry Potter and the Order of the Phoenix</i> with this concise and insightful summary and analysis!</b><br/><br/>This engaging summary presents an analysis of <i>Harry Potter and the Order of the Phoenix</i> by J.K. Rowling, which follows Harry as he faces widespread rejection from the wizarding world, which refuses to believe his claim that Lord Voldemort has returned. The arrival of the sadistic bureaucrat Dolores Umbridge as Hogwarts’ new Defence Against the Dark Arts professor only aggravates the situation, and Harry soon becomes the de facto leader of the students working against her, even as Voldemort begins gathering his followers in preparation for a new war. <i>Harry Potter and the Order of the Phoenix</i> is the fifth novel in J.K. Rowling’s bestselling seven-book series, which has inspired films, video games, board games and even a theme park. Rowling is now a household name around the world, and her other books include <i>The Casual Vacancy</i> (2012) and <i>The Cuckoo’s Calling</i> (2013), which was published under the pseudonym Robert Galbraith.<br/><br/>Find out everything you need to know about <i>Harry Potter and the Order of the Phoenix</i> in a fraction of the time!<br/><br/><b><i>This in-depth and informative reading guide brings you:</i></b><br/><br/>• A complete plot summary<br/>• Character studies<br/>• Key themes and symbols<br/>• Questions for further reflection<br/><br/><i>Why choose BrightSummaries.com?</i><br/><br/>Available in print and digital format, our publications are designed to accompany you on your reading journey. The clear and concise style makes for easy understanding, providing the perfect opportunity to improve your literary knowledge in no time.<br/><b><br/>See the very best of literature in a whole new light with BrightSummaries.com!</b><br/>",
-        "price":"$5.44"
-    },
-    {
-        "id": 14,
-        "books_id": "15881",
-        "title": "Harry Potter and the Chamber of Secrets (Novel Study) Gr. 4-8",
-        "url_playbook":"https://play.google.com/store/books/details/Keith_Whittington_Harry_Potter_and_the_Chamber_of?id=CBU-CQAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/CBU-CQAAQBAJ?fife=w480-h690",
-        "synopsis":"Harry Potter and the Chamber of Secrets is about Harry's second year at Hogwarts, and how he must uncover the truth of the Chamber of Secrets before the school is forced to close. Our unit provides teachers with a highly structured format for teaching language arts as students develop a love for reading longer materials like novels. Various areas such as reading comprehension, vocabulary development, spelling, grammar, and writing are all entwined in this integrated approach, eliminating the need for teaching these skills separately. This Novel Study provides a teacher and student section with a variety of activities, chapter questions, word search, graphic organizer and answer key to create a well-rounded lesson plan.",
-        "price":"$9.74"
-    },
-    {
-        "id": 15,
-        "books_id": "6",
-        "title": "Harry Potter and the Goblet of Fire by J.K. Rowling (Book Analysis): Detailed Summary, Analysis and Reading Guide",
-        "url_playbook":"https://play.google.com/store/books/details/Bright_Summaries_Harry_Potter_and_the_Goblet_of_Fi?id=GxlLDwAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/GxlLDwAAQBAJ?fife=w480-h690",
-        "synopsis":"<b>Unlock the more straightforward side of <i>Harry Potter and the Goblet of Fire</i> with this concise and insightful summary and analysis!</b><br/><br/>This engaging summary presents an analysis of <i>Harry Potter and the Goblet of Fire</i> by J.K. Rowling, which follows Harry as he takes part in the Triwizard Tournament, a contest between students from three different magical schools. Harry must draw on all his wits, skills and courage in order to survive and win the Tournament, and more importantly, to unmask the traitor who is conspiring to help Lord Voldemort return to power. <i>Harry Potter and the Goblet of Fire</i> is the fourth novel in J.K. Rowling’s bestselling seven-book series, which has inspired films, video games, board games and even a theme park. Rowling is now a household name around the world, and her other books include <i>The Casual Vacancy</i> (2012) and <i>The Cuckoo’s Calling </i>(2013), which was published under the pseudonym Robert Galbraith.<br/><br/>Find out everything you need to know about <i>Harry Potter and the Goblet of Fire</i> in a fraction of the time!<br/><b><i><br/>This in-depth and informative reading guide brings you:</i></b><br/>• A complete plot summary<br/>• Character studies<br/>• Key themes and symbols<br/>• Questions for further reflection<br/><i><br/>Why choose BrightSummaries.com?</i><br/>Available in print and digital format, our publications are designed to accompany you on your reading journey. The clear and concise style makes for easy understanding, providing the perfect opportunity to improve your literary knowledge in no time.<br/><b><br/>See the very best of literature in a whole new light with BrightSummaries.com!</b><br/>",
-        "price":"$5.44"
-    },
-    {
-        "id": 16,
-        "books_id": "136251",
-        "title": "A Study Guide for J.K. Rowling's Harry Potter and the Deathly Hallows",
-        "url_playbook":"https://play.google.com/store/books/details/Gale_Cengage_Learning_A_Study_Guide_for_J_K_Rowlin?id=BRoeCgAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/BRoeCgAAQBAJ?fife=w480-h690",
-        "synopsis":"A Study Guide for J.K. Rowling's \"\"Harry Potter and the Deathly Hallows,\"\" excerpted from Gale's acclaimed Literary News For Students.This concise study guide includes plot summary, character analysis, author biography, study questions, historical context, suggestions for further reading, and much more. For any literature project, trust Literary News For Students for all of your research needs.",
-        "price":"$4.74"
-    },
-    {
-        "id": 17,
-        "books_id": "1",
-        "title": "Harry Potter and the Half-Blood Prince by J.K. Rowling (Book Analysis): Detailed Summary, Analysis and Reading Guide",
-        "url_playbook":"https://play.google.com/store/books/details/Bright_Summaries_Harry_Potter_and_the_Half_Blood_P?id=YQh_DwAAQBAJ",
-        "url_image":"https://books.google.com/books/publisher/content/images/frontcover/YQh_DwAAQBAJ?fife=w480-h690",
-        "synopsis":"<b>Unlock the more straightforward side of <i>Harry Potter and the Half-Blood Prince</i> with this concise and insightful summary and analysis!</b><br/><br/>This engaging summary presents an analysis of <i>Harry Potter and the Half-Blood Prince</i> by J.K. Rowling, which follows Harry as he tries to learn as much as possible about Lord Voldemort’s powers and weaknesses while still keeping up with his schoolwork, dealing with teenage drama and trying to keep an eye on his rival Draco Malfoy, who has been behaving oddly ever since their return to Hogwarts... <i>Harry Potter and the Half-Blood Prince</i> is the sixth novel in J.K. Rowling’s bestselling seven-book series, which has inspired films, video games, board games and even a theme park. Rowling is now a household name around the world, and her other books include <i>The Casual Vacancy</i> (2012) and <i>The Cuckoo’s Calling</i> (2013), which was published under the pseudonym Robert Galbraith.<br/><br/>Find out everything you need to know about <i>Harry Potter and the Half-Blood Prince </i>in a fraction of the time!<br/><br/><b><i>This in-depth and informative reading guide brings you:</i></b><br/><br/>• A complete plot summary<br/>• Character studies<br/>• Key themes and symbols<br/>• Questions for further reflection<br/><br/><i>Why choose BrightSummaries.com?</i><br/><br/>Available in print and digital format, our publications are designed to accompany you on your reading journey. The clear and concise style makes for easy understanding, providing the perfect opportunity to improve your literary knowledge in no time.<br/><br/><b>See the very best of literature in a whole new light with BrightSummaries.com!</b>",
-        "price":"$5.44"
-    },
-    {
-        "id": 18,
-        "books_id": "7624",
-        "title": "Lord of the Flies: New Educational Edition",
-        "url_playbook":"https://play.google.com/store/books/details/William_Golding_Lord_of_the_Flies?id=DKU1EsmnpMQC",
-        "url_image":"https://books.google.com/books/content/images/frontcover/DKU1EsmnpMQC?fife=w480-h690",
-        "synopsis":"A plane crashes on a desert island and the only survivors, a group of schoolboys, assemble on the beach and wait to be rescued. By day they inhabit a land of bright fantastic birds and dark blue seas, but at night their dreams are haunted by the image of a terrifying beast. As the boys' delicate sense of order fades, so their childish dreams are transformed into something more primitive, and their behaviour starts to take on a murderous, savage significance.<br/><br/>First published in 1954, <i>Lord of the Flies</i> is one of the most celebrated and widely read of modern classics. Now fully revised and updated, this educational edition includes chapter summaries, comprehension questions, discussion points, classroom activities, a biographical profile of Golding, historical context relevant to the novel and an essay on <i>Lord of the Flies</i> by William Golding entitled 'Fable'. Aimed at Key Stage 3 and 4 students, it also includes a section on literary theory for advanced or A-level students. The educational edition encourages original and independent thinking while guiding the student through the text - ideal for use in the classroom and at home.",
-        "price":"$9.00"
-    },
-    {
-        "id": 19,
-        "books_id": "18135",
-        "title": "Romeo and Juliet",
-        "url_playbook":"https://play.google.com/store/books/details/William_Shakespeare_Romeo_and_Juliet?id=moYNAAAAYAAJ",
-        "url_image":"https://books.google.com/books/content/images/frontcover/moYNAAAAYAAJ?fife=w480-h690",
-        "synopsis":"Performed all over the world, and constantly adapted and reinterpreted in a variety of mediums, Shakespeare’s 1597 tale about the doomed “star-crossed lovers” from enemy families whose tumultuous affair ends in tragedy is one of his best known and most beloved plays. The story of the feuding Montague and Capulet families features the famous balcony scene where the lovers first realize their mutual affection, setting off a series of duels, secret plots, and misunderstandings that eventually leads to one of the most tragic death scenes in all of theater.",
-        "price":"0"
-    }
+  {
+    "id": 1,
+    "books_id": "3",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "url_playbook": "https://play.google.com/store/books/details/John_Williams_Harry_Potter_and_the_Sorcerer_s_Ston?id=q0nABgAAQBAJhttps://play.google.com/store/books/details/John_Williams_Harry_Potter_and_the_Sorcerer_s_Ston?id=q0nABgAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/q0nABgAAQBAJ?fife=w480-h690",
+    "synopsis": "This instrumental series contains selected themes from the box office sensation,Harry Potter and the Sorcerer's Stone",
+    "price": "$6.53"
+  },
+  {
+    "id": 2,
+    "books_id": "41865",
+    "title": "Twilight: Twilight, Book 1",
+    "url_playbook": "https://play.google.com/store/books/details/Stephenie_Meyer_Twilight?id=lGjFtMRqp_YC",
+    "url_image": "https://books.google.com/books/content/images/frontcover/lGjFtMRqp_YC?fife=w480-h690",
+    "synopsis": "When 17 year old Isabella Swan moves to Forks, Washington to live with her father she expects that her new life will be as dull as the town.<br/><br/>But in spite of her awkward manner and low expectations, she finds that her new classmates are drawn to this pale, dark-haired new girl in town. But not, it seems, the Cullen family. These five adopted brothers and sisters obviously prefer their own company and will make no exception for Bella. <br/><br/>Bella is convinced that Edward Cullen in particular hates her, but she feels a strange attraction to him, although his hostility makes her feel almost physically ill. He seems determined to push her away - until, that is, he saves her life from an out of control car. <br/><br/>Bella will soon discover that there is a very good reason for Edward's coldness. He, and his family, are vampires - and he knows how dangerous it is for others to get too close.",
+    "price": "$10.70"
+  },
+  {
+    "id": 3,
+    "books_id": "2657",
+    "title": "To Kill a Mockingbird",
+    "url_playbook": "https://play.google.com/store/books/details/Harper_Lee_To_Kill_a_Mockingbird?id=PGR2AwAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/PGR2AwAAQBAJ?fife=w480-h690",
+    "synopsis": "Voted America's Best-Loved Novel in PBS's The Great American Read<p>Harper Lee's Pulitzer Prize-winning masterwork of honor and injustice in the deep South—and the heroism of one man in the face of blind and violent hatred</p><p>One of the most cherished stories of all time, To Kill a Mockingbird has been translated into more than forty languages, sold more than forty million copies worldwide, served as the basis for an enormously popular motion picture, and was voted one of the best novels of the twentieth century by librarians across the country. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, as her father—a crusading local lawyer—risks everything to defend a black man unjustly accused of a terrible crime.",
+    "price": "$12.51"
+  },
+  {
+    "id": 4,
+    "books_id": "4671",
+    "url_playbook": "https://play.google.com/store/books/details/F_Scott_Fitzgerald_The_Great_Gatsby?id=Z4T7DwAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/Z4T7DwAAQBAJ?fife=w480-h690",
+    "synopsis": "<b>The classic novel that continues to haunt our understanding of ambition, love, entitlement, and the American Dream—with an exclusive discussion guide and an introduction by Pulitzer Prize–winning critic Wesley Morris<br/><br/>One of the Modern Library 100 Best Novels of the Twentieth Century</b><br/>  <br/>Nick Carraway is an aspiring writer, his cousin, Daisy, is married to the fabulously wealthy Tom Buchanan. Their neighbor, Jay Gatsby, throws extravagant and extraordinary parties in the exclusive and hallowed neighborhood of West Egg. The entanglements between these four characters form the backbone of F. Scott Fitzgerald’s greatest work.<br/><br/>When it was first published in 1925, <i>The Great Gatsby</i> was heralded “a mystical, glamorous story of today” (<i>The New York Times</i>). Since then, the story of Jay Gatsby and his love for the treacherous, effervescent Daisy Buchanan has become a staple in high school and college classrooms, a beloved favorite of readers everywhere, and the #2 entry in the Modern Library’s own list of the best novels of the twentieth century.",
+    "price": "$7.04"
+  },
+  {
+    "id": 5,
+    "books_id": "11870085",
+    "title": "The Fault in Our Stars",
+    "url_playbook": "https://play.google.com/store/books/details/John_Green_The_Fault_in_Our_Stars?id=UzqVUdEtLDwC",
+    "url_image": "https://books.google.com/books/content/images/frontcover/UzqVUdEtLDwC?fife=w480-h690",
+    "synopsis": "<b>The beloved, #1 global bestseller by John Green, author of <i>The Anthropocene Reviewed </i>and <i>Turtles All the Way Down</i></b><br/><br/><i>“John Green is one of the best writers alive.” –E. Lockhart, #1 bestselling author of </i>We Were Liars<br/><br/><i>“The greatest romance story of this decade.″ –</i>Entertainment Weekly<br/><br/>#1 New York Times Bestseller • #1 Wall Street Journal Bestseller • #1 USA Today Bestseller • #1 International Bestseller<br/><br/>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel’s story is about to be completely rewritten.<br/><br/>From John Green, #1 bestselling author of <i>The Anthropocene Reviewed</i> and <i>Turtles All the Way Down, The Fault in Our Stars </i>is insightful, bold, irreverent, and raw. It brilliantly explores the funny, thrilling, and tragic business of being alive and in love.",
+    "price": "$11.02"
+  },
+  {
+    "id": 6,
+    "books_id": "5907",
+    "title": "The Hobbit",
+    "url_playbook": "https://play.google.com/store/books/details/J_R_R_Tolkien_The_Hobbit?id=U799AY3yfqcC",
+    "url_image": "https://books.google.com/books/content/images/frontcover/U799AY3yfqcC?fife=w480-h690",
+    "synopsis": "This is the story of how a Baggins had an adventure, and found himself doing and saying things altogether unexpected... <p> ‘A flawless masterpiece’<br/>The Times </p> <p>Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely travelling further than the pantry of his hobbit-hole in Bag End. But his contentment is disturbed when the wizard, Gandalf, and a company of thirteen dwarves arrive on his doorstep one day, to whisk him away on a journey ‘there and back again’. They have a plot to raid the treasure hoard of Smaug the Magnificent, a large and very dangerous dragon...</p> <p>The prelude to THE LORD OF THE RINGS, THE HOBBIT has sold many millions of copies since its publication in 1937, establishing itself as one of the most beloved and influential books of the twentieth century.</p>",
+    "price": "$8.44"
+  },
+  {
+    "id": 7,
+    "books_id": "5107",
+    "title": "The Catcher in the Rye",
+    "url_playbook": "https://play.google.com/store/books/details/J_D_Salinger_The_Catcher_in_the_Rye?id=mZunDwAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/mZunDwAAQBAJ?fife=w480-h690",
+    "synopsis": "<b>'If you really want to hear about it, the first thing you'll probably want to know is where I was born and what my lousy childhood was like, and how my parents were occupied and all before they had me, and all that David Copperfield kind of crap, but I don't feel like going into it, if you want to know the truth.'</b><br/><br/>The first of J. D. Salinger's four books to be published, <i>The Catcher in the Rye</i> is one of the most widely read and beloved of all contemporary American novels.<br/><br/>'The handbook of the adolescent heart' <i>The New Yorker</i>",
+    "price": "$11.25"
+  },
+  {
+    "id": 8,
+    "books_id": "77203",
+    "title": "The Kite Runner",
+    "url_playbook": "https://play.google.com/store/books/details/Khaled_Hosseini_The_Kite_Runner?id=9Q0_5ogipFsC",
+    "url_image": "https://books.google.com/books/content/images/frontcover/9Q0_5ogipFsC?fife=w480-h690",
+    "synopsis": "<b>The #1 <i>New York Times</i> bestselling novel beloved by millions of readers the world over.<br/><br/>“A vivid and engaging story that reminds us how long his people [of Afghanistan] have been struggling to triumph over the forces of violence—forces that continue to threaten them even today.\"\" –<i>New York Times Book Review</i></b><br/>  <br/> The unforgettable, heartbreaking story of the unlikely friendship between a wealthy boy and the son of his father’s servant, caught in the tragic sweep of history, <i>The Kite Runner</i> transports readers to Afghanistan at a tense and crucial moment of change and destruction. A powerful story of friendship, it is also about the power of reading, the price of betrayal, and the possibility of redemption, and an exploration of the power of fathers over sons—their love, their sacrifices, their lies.<br/>  <br/> Since its publication in 2003 <i>Kite Runner</i> has become a beloved, one-of-a-kind classic of contemporary literature, touching millions of readers, and launching the career of one of America's most treasured writers.",
+    "price": "$15.42"
+  },
+  {
+    "id": 9,
+    "books_id": "5470",
+    "title": "1984",
+    "url_playbook": "https://play.google.com/store/books/details/George_Orwell_1984?id=kotPYEqx7kMC",
+    "url_image": "https://books.google.com/books/content/images/frontcover/kotPYEqx7kMC?fife=w480-h690",
+    "synopsis": "A PBS Great American Read Top 100 Pick<br/><br/> With extraordinary relevance and renewed popularity, George Orwell’s 1984 takes on new life in this edition.<br/><br/> “Orwell saw, to his credit, that the act of falsifying reality is only secondarily a way of changing perceptions. It is, above all, a way of asserting power.”—The New Yorker<br/>  <br/> In 1984, London is a grim city in the totalitarian state of Oceania where Big Brother is always watching you and the Thought Police can practically read your mind. Winston Smith is a man in grave danger for the simple reason that his memory still functions. Drawn into a forbidden love affair, Winston finds the courage to join a secret revolutionary organization called The Brotherhood, dedicated to the destruction of the Party. Together with his beloved Julia, he hazards his life in a deadly match against the powers that be.<br/><br/> Lionel Trilling said of Orwell’s masterpiece, “1984 is a profound, terrifying, and wholly fascinating book. It is a fantasy of the political future, and like any such fantasy, serves its author as a magnifying device for an examination of the present.” Though the year 1984 now exists in the past, Orwell’s novel remains an urgent call for the individual willing to speak truth to power.",
+    "price": "$16.20"
+  },
+  {
+    "id": 10,
+    "books_id": "7613",
+    "title": "Animal Farm",
+    "url_playbook": "https://play.google.com/store/books/details/George_Orwell_Animal_Farm?id=o8rrDwAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/o8rrDwAAQBAJ?fife=w480-h690",
+    "synopsis": "All animals are equal but some animals are more equal than others.It's just an ordinary farm - until the animals revolt. They get rid of the irresponsible farmer. The other animals are sure that life is improving, but as systems are replaced and half-truths are retold, a new hierarchy emerges . . .Orwell's tale of propaganda, power and greed has never felt more pertinent.With an exciting new cover and inside illustrations by superstar Chris Mould.",
+    "price": "$6.74"
+  },
+  {
+    "id": 11,
+    "books_id": "48855",
+    "url_playbook": "https://play.google.com/store/books/details/Anne_Frank_The_Diary_of_a_Young_Girl?id=kRE8xxCmUcMC",
+    "url_image": "https://books.google.com/books/content/images/frontcover/kRE8xxCmUcMC?fife=w480-h690",
+    "synopsis": "<b>THE DEFINITIVE EDITION <b>•</b> Discovered in the attic in which she spent the last years of her life, Anne Frank’s remarkable diary has since become a world classic—a powerful reminder of the horrors of war and an eloquent testament to the human spirit.<br/></b><br/><b>Updated for the 75th Anniversary of the <i>Diary</i>’s first publication with a new introduction by Nobel Prize–winner Nadia Murad<br/><br/>“The single most compelling personal account of the Holocaust ... remains astonishing and excruciating.”—<i>The New York Times Book Review</i></b><br/><br/>In 1942, with Nazis occupying Holland, a thirteen-year-old Jewish girl and her family fled their home in Amsterdam and went into hiding. For the next two years, until their whereabouts were betrayed to the Gestapo, they and another family lived cloistered in the “Secret Annex” of an old office building. Cut off from the outside world, they faced hunger, boredom, the constant cruelties of living in confined quarters, and the ever-present threat of discovery and death. In her diary Anne Frank recorded vivid impressions of her experiences during this period. By turns thoughtful, moving, and amusing, her account offers a fascinating commentary on human courage and frailty and a compelling self-portrait of a sensitive and spirited young woman whose promise was tragically cut short.",
+    "price": "$13.21"
+  },
+  {
+    "id": 12,
+    "books_id": "5",
+    "url_playbook": "https://play.google.com/store/books/details/Keith_Whittington_Harry_Potter_and_the_Prisoner_of?id=4xQ-CQAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/4xQ-CQAAQBAJ?fife=w480-h690",
+    "synopsis": "Harry Potter and the Prisoner of Azkaban is about a killer who breaks out of the prison in order to finish what he started years ago — to kill Harry Potter. Our unit provides teachers with a highly structured format for teaching language arts as students develop a love for reading longer materials like novels. Various areas such as reading comprehension, vocabulary development, spelling, grammar, and writing are all entwined in this integrated approach, eliminating the need for teaching these skills separately. This Novel Study provides a teacher and student section with a variety of activities, chapter questions and answer key to create a well-rounded lesson plan.",
+    "price": "$9.74"
+  },
+  {
+    "id": 13,
+    "books_id": "2",
+    "title": "Harry Potter and the Order of the Phoenix by J.K. Rowling (Book Analysis): Detailed Summary, Analysis and Reading Guide",
+    "url_playbook": "https://play.google.com/store/books/details/Bright_Summaries_Harry_Potter_and_the_Order_of_the?id=b8l0DwAAQBAJ        ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/b8l0DwAAQBAJ?fife=w480-h690",
+    "synopsis": "<b>Unlock the more straightforward side of <i>Harry Potter and the Order of the Phoenix</i> with this concise and insightful summary and analysis!</b><br/><br/>This engaging summary presents an analysis of <i>Harry Potter and the Order of the Phoenix</i> by J.K. Rowling, which follows Harry as he faces widespread rejection from the wizarding world, which refuses to believe his claim that Lord Voldemort has returned. The arrival of the sadistic bureaucrat Dolores Umbridge as Hogwarts’ new Defence Against the Dark Arts professor only aggravates the situation, and Harry soon becomes the de facto leader of the students working against her, even as Voldemort begins gathering his followers in preparation for a new war. <i>Harry Potter and the Order of the Phoenix</i> is the fifth novel in J.K. Rowling’s bestselling seven-book series, which has inspired films, video games, board games and even a theme park. Rowling is now a household name around the world, and her other books include <i>The Casual Vacancy</i> (2012) and <i>The Cuckoo’s Calling</i> (2013), which was published under the pseudonym Robert Galbraith.<br/><br/>Find out everything you need to know about <i>Harry Potter and the Order of the Phoenix</i> in a fraction of the time!<br/><br/><b><i>This in-depth and informative reading guide brings you:</i></b><br/><br/>• A complete plot summary<br/>• Character studies<br/>• Key themes and symbols<br/>• Questions for further reflection<br/><br/><i>Why choose BrightSummaries.com?</i><br/><br/>Available in print and digital format, our publications are designed to accompany you on your reading journey. The clear and concise style makes for easy understanding, providing the perfect opportunity to improve your literary knowledge in no time.<br/><b><br/>See the very best of literature in a whole new light with BrightSummaries.com!</b><br/>",
+    "price": "$5.44"
+  },
+  {
+    "id": 14,
+    "books_id": "15881",
+    "title": "Harry Potter and the Chamber of Secrets (Novel Study) Gr. 4-8",
+    "url_playbook": "https://play.google.com/store/books/details/Keith_Whittington_Harry_Potter_and_the_Chamber_of?id=CBU-CQAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/CBU-CQAAQBAJ?fife=w480-h690",
+    "synopsis": "Harry Potter and the Chamber of Secrets is about Harry's second year at Hogwarts, and how he must uncover the truth of the Chamber of Secrets before the school is forced to close. Our unit provides teachers with a highly structured format for teaching language arts as students develop a love for reading longer materials like novels. Various areas such as reading comprehension, vocabulary development, spelling, grammar, and writing are all entwined in this integrated approach, eliminating the need for teaching these skills separately. This Novel Study provides a teacher and student section with a variety of activities, chapter questions, word search, graphic organizer and answer key to create a well-rounded lesson plan.",
+    "price": "$9.74"
+  },
+  {
+    "id": 15,
+    "books_id": "6",
+    "title": "Harry Potter and the Goblet of Fire by J.K. Rowling (Book Analysis): Detailed Summary, Analysis and Reading Guide",
+    "url_playbook": "https://play.google.com/store/books/details/Bright_Summaries_Harry_Potter_and_the_Goblet_of_Fi?id=GxlLDwAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/GxlLDwAAQBAJ?fife=w480-h690",
+    "synopsis": "<b>Unlock the more straightforward side of <i>Harry Potter and the Goblet of Fire</i> with this concise and insightful summary and analysis!</b><br/><br/>This engaging summary presents an analysis of <i>Harry Potter and the Goblet of Fire</i> by J.K. Rowling, which follows Harry as he takes part in the Triwizard Tournament, a contest between students from three different magical schools. Harry must draw on all his wits, skills and courage in order to survive and win the Tournament, and more importantly, to unmask the traitor who is conspiring to help Lord Voldemort return to power. <i>Harry Potter and the Goblet of Fire</i> is the fourth novel in J.K. Rowling’s bestselling seven-book series, which has inspired films, video games, board games and even a theme park. Rowling is now a household name around the world, and her other books include <i>The Casual Vacancy</i> (2012) and <i>The Cuckoo’s Calling </i>(2013), which was published under the pseudonym Robert Galbraith.<br/><br/>Find out everything you need to know about <i>Harry Potter and the Goblet of Fire</i> in a fraction of the time!<br/><b><i><br/>This in-depth and informative reading guide brings you:</i></b><br/>• A complete plot summary<br/>• Character studies<br/>• Key themes and symbols<br/>• Questions for further reflection<br/><i><br/>Why choose BrightSummaries.com?</i><br/>Available in print and digital format, our publications are designed to accompany you on your reading journey. The clear and concise style makes for easy understanding, providing the perfect opportunity to improve your literary knowledge in no time.<br/><b><br/>See the very best of literature in a whole new light with BrightSummaries.com!</b><br/>",
+    "price": "$5.44"
+  },
+  {
+    "id": 16,
+    "books_id": "136251",
+    "title": "A Study Guide for J.K. Rowling's Harry Potter and the Deathly Hallows",
+    "url_playbook": "https://play.google.com/store/books/details/Gale_Cengage_Learning_A_Study_Guide_for_J_K_Rowlin?id=BRoeCgAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/BRoeCgAAQBAJ?fife=w480-h690",
+    "synopsis": "A Study Guide for J.K. Rowling's \"\"Harry Potter and the Deathly Hallows,\"\" excerpted from Gale's acclaimed Literary News For Students.This concise study guide includes plot summary, character analysis, author biography, study questions, historical context, suggestions for further reading, and much more. For any literature project, trust Literary News For Students for all of your research needs.",
+    "price": "$4.74"
+  },
+  {
+    "id": 17,
+    "books_id": "1",
+    "title": "Harry Potter and the Half-Blood Prince by J.K. Rowling (Book Analysis): Detailed Summary, Analysis and Reading Guide",
+    "url_playbook": "https://play.google.com/store/books/details/Bright_Summaries_Harry_Potter_and_the_Half_Blood_P?id=YQh_DwAAQBAJ",
+    "url_image": "https://books.google.com/books/publisher/content/images/frontcover/YQh_DwAAQBAJ?fife=w480-h690",
+    "synopsis": "<b>Unlock the more straightforward side of <i>Harry Potter and the Half-Blood Prince</i> with this concise and insightful summary and analysis!</b><br/><br/>This engaging summary presents an analysis of <i>Harry Potter and the Half-Blood Prince</i> by J.K. Rowling, which follows Harry as he tries to learn as much as possible about Lord Voldemort’s powers and weaknesses while still keeping up with his schoolwork, dealing with teenage drama and trying to keep an eye on his rival Draco Malfoy, who has been behaving oddly ever since their return to Hogwarts... <i>Harry Potter and the Half-Blood Prince</i> is the sixth novel in J.K. Rowling’s bestselling seven-book series, which has inspired films, video games, board games and even a theme park. Rowling is now a household name around the world, and her other books include <i>The Casual Vacancy</i> (2012) and <i>The Cuckoo’s Calling</i> (2013), which was published under the pseudonym Robert Galbraith.<br/><br/>Find out everything you need to know about <i>Harry Potter and the Half-Blood Prince </i>in a fraction of the time!<br/><br/><b><i>This in-depth and informative reading guide brings you:</i></b><br/><br/>• A complete plot summary<br/>• Character studies<br/>• Key themes and symbols<br/>• Questions for further reflection<br/><br/><i>Why choose BrightSummaries.com?</i><br/><br/>Available in print and digital format, our publications are designed to accompany you on your reading journey. The clear and concise style makes for easy understanding, providing the perfect opportunity to improve your literary knowledge in no time.<br/><br/><b>See the very best of literature in a whole new light with BrightSummaries.com!</b>",
+    "price": "$5.44"
+  },
+  {
+    "id": 18,
+    "books_id": "7624",
+    "title": "Lord of the Flies: New Educational Edition",
+    "url_playbook": "https://play.google.com/store/books/details/William_Golding_Lord_of_the_Flies?id=DKU1EsmnpMQC",
+    "url_image": "https://books.google.com/books/content/images/frontcover/DKU1EsmnpMQC?fife=w480-h690",
+    "synopsis": "A plane crashes on a desert island and the only survivors, a group of schoolboys, assemble on the beach and wait to be rescued. By day they inhabit a land of bright fantastic birds and dark blue seas, but at night their dreams are haunted by the image of a terrifying beast. As the boys' delicate sense of order fades, so their childish dreams are transformed into something more primitive, and their behaviour starts to take on a murderous, savage significance.<br/><br/>First published in 1954, <i>Lord of the Flies</i> is one of the most celebrated and widely read of modern classics. Now fully revised and updated, this educational edition includes chapter summaries, comprehension questions, discussion points, classroom activities, a biographical profile of Golding, historical context relevant to the novel and an essay on <i>Lord of the Flies</i> by William Golding entitled 'Fable'. Aimed at Key Stage 3 and 4 students, it also includes a section on literary theory for advanced or A-level students. The educational edition encourages original and independent thinking while guiding the student through the text - ideal for use in the classroom and at home.",
+    "price": "$9.00"
+  },
+  {
+    "id": 19,
+    "books_id": "18135",
+    "title": "Romeo and Juliet",
+    "url_playbook": "https://play.google.com/store/books/details/William_Shakespeare_Romeo_and_Juliet?id=moYNAAAAYAAJ",
+    "url_image": "https://books.google.com/books/content/images/frontcover/moYNAAAAYAAJ?fife=w480-h690",
+    "synopsis": "Performed all over the world, and constantly adapted and reinterpreted in a variety of mediums, Shakespeare’s 1597 tale about the doomed “star-crossed lovers” from enemy families whose tumultuous affair ends in tragedy is one of his best known and most beloved plays. The story of the feuding Montague and Capulet families features the famous balcony scene where the lovers first realize their mutual affection, setting off a series of duels, secret plots, and misunderstandings that eventually leads to one of the most tragic death scenes in all of theater.",
+    "price": "0"
+  }
 ]

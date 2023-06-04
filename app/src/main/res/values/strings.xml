@@ -23,10 +23,17 @@
     <string name="lorem">(sneakpeak of the latest chapter) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</string>
     <string name="see_more">see more on your library…</string>
     <string name="recommendation">Recommendation</string>
-    <string name="discover_more">discover more...</string>
+    <string name="discover_more">discover more…</string>
     <string name="home">Home</string>
     <string name="library">Library</string>
     <string name="discover">Discover</string>
     <string name="profile">Profile</string>
     <string name="last_selected_book">Last Selected Book</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rating">Rating</string>
+    <string name="author">Author</string>
+    <string name="tags">Tags</string>
+    <string name="isbn">ISBN</string>
+    <string name="your_library">Your Library</string>
 </resources>

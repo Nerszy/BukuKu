@@ -55,7 +55,7 @@ class InitialGenreActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         supportActionBar?.hide()
 
-        val layoutManager = StaggeredGridLayoutManager(3,GridLayoutManager.VERTICAL)
+        val layoutManager = StaggeredGridLayoutManager(3, GridLayoutManager.VERTICAL)
         binding.rvGenres.adapter = adapter
         binding.rvGenres.layoutManager = layoutManager
 
@@ -63,6 +63,7 @@ class InitialGenreActivity : AppCompatActivity() {
             val selectedGenresText = getSelectedGenresText()
             Toast.makeText(this, selectedGenresText, Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, InitialBookActivity::class.java))
+            finish()
         }
     }
 
