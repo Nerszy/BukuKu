@@ -6,7 +6,9 @@ const userSchema = mongoose.Schema(
         email: String,
         namaLengkap : String,
         username: String,
-        password: String
+        password: String,
+        currentPassword: String,
+        newPassword: String
     }
 
 )
