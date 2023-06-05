@@ -10,5 +10,10 @@ const routes = require("express").Router()
         userControllers.login(req.body)
             .then((result) => res.json(result))
             .catch((err) => res.json(err))
+    })
+    routes.post('/changePassword', (req, res) => {
+        userControllers.changePassword(req.body)
+            .then((result) => res.json(result))
+            .catch((err) => res.json(err))
 })
 module.exports = routes
