@@ -1,5 +1,6 @@
 package com.dicoding.bukuku
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -15,6 +16,11 @@ class DetailBookActivity : AppCompatActivity() {
         ActivityDetailBookBinding.inflate(layoutInflater)
     }
 
+    private val viewModel: DetailBookViewModel by lazy {
+        DetailBookViewModel()
+    }
+
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -22,28 +28,37 @@ class DetailBookActivity : AppCompatActivity() {
         // set home as up
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val url = intent.getStringExtra(EXTRA_URL)
-        val title = intent.getStringExtra(EXTRA_TITLE)
-        val synopsis = intent.getStringExtra(EXTRA_SYNOPSIS)
-        val price = intent.getStringExtra(EXTRA_PRICE)
-        val playbook = intent.getStringExtra(EXTRA_PLAYBOOK)
+        val id = intent.getIntExtra(EXTRA_ID, 0)
 
-        @Suppress("DEPRECATION")
-        binding.apply {
-            tvBookTitle.text = title
-            tvSynopsis.text = Html.fromHtml(synopsis)
-            tvPrice.text = price
-            tvBuy.setOnClickListener {
-                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(playbook))
-                startActivity(browserIntent)
+        viewModel.getBookById(id)
+        viewModel.book.observe(this) { book ->
+            book?.let { listBook ->
+                @Suppress("DEPRECATION")
+                binding.apply {
+                    tvBookTitle.text = listBook.title
+                    tvSynopsis.text = Html.fromHtml(listBook.synopsis)
+                    tvSynopsis.maxLines = Int.MAX_VALUE
+                    tvPrice.text = listBook.idr
+                    tvBuy.setOnClickListener {
+                        val browserIntent =
+                            Intent(Intent.ACTION_VIEW, Uri.parse(listBook.urlPlaybook))
+                        startActivity(browserIntent)
+                    }
+                    tvRating.text = "Average Rating: ${listBook.avgRating}"
+                    tvIsbn.text = "ISBN: ${listBook.isbn}"
+                    tvAuthor.text = "Author: ${listBook.author}"
+                    tvTags.text =
+                        "Included Tags: ${listBook.tags1}, ${listBook.tags2}, ${listBook.tags3}"
+
+                }
+                Glide.with(this)
+                    .load(listBook.urlImage)
+                    .skipMemoryCache(true)
+                    .placeholder(R.drawable.sample_book)
+                    .centerCrop()
+                    .into(binding.imgBook)
             }
-
         }
-        Glide.with(this)
-            .load(url)
-            .skipMemoryCache(true)
-            .centerCrop()
-            .into(binding.imgBook)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -58,10 +73,6 @@ class DetailBookActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_URL = "extra_url"
-        const val EXTRA_TITLE = "extra_title"
-        const val EXTRA_SYNOPSIS = "extra_synopsis"
-        const val EXTRA_PRICE = "extra_price"
-        const val EXTRA_PLAYBOOK = "extra_playbook"
+        const val EXTRA_ID = "extra_id"
     }
 }

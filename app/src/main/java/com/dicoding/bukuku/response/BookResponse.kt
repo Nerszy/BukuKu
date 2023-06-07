@@ -48,3 +48,8 @@ data class BooksItem(
     @field:SerializedName("_id")
     val id: String
 )
+
+data class BookPagingResponse(
+    @field:SerializedName("books")
+    val books: List<BooksItem>
+)

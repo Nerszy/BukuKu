@@ -33,7 +33,8 @@
         android:maxLines="2"
         android:text="@string/book_title"
         android:textSize="11sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/linearBook"
+        app:layout_constraintStart_toStartOf="@+id/linearBook"
         app:layout_constraintTop_toBottomOf="@+id/linearBook" />
 </androidx.constraintlayout.widget.ConstraintLayout>

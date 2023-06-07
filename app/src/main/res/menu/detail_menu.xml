@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/icon_search"
+        android:fontFamily="@font/poppins"
+        android:icon="@drawable/ic_search_black"
+        android:title="@string/searchbar_hint" />
+
+    <item
+        android:id="@+id/icon_favorite"
+        android:fontFamily="@font/poppins"
+        android:icon="@drawable/star"
+        android:title="@string/favorite" />
+</menu>

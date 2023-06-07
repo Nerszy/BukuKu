@@ -13,32 +13,9 @@ import com.dicoding.bukuku.databinding.ActivityInitialGenreBinding
 class InitialGenreActivity : AppCompatActivity() {
 
     private val genre = listOf(
-        "Action",
-        "Adventure",
-        "Comedy",
-        "Drama",
-        "Fantasy",
-        "Horror",
-        "Mystery",
-        "Romance",
-        "Thriller",
-        "Western",
-        "Sci-Fi",
-        "Crime",
-        "Animation",
-        "Family",
-        "History",
-        "War",
-        "Music",
-        "Documentary",
-        "TV Movie",
-        "Foreign",
-        "Reality",
-        "Soap",
-        "Talk",
-        "War & Politics",
-        "News"
-    ).sortedBy { it }
+        "Fiction", "Non-Fiction", "Young-Adult", "Fantasy", "Classics", "Historical-Fiction", "Mystery",
+        "Book-Club", "Romance", "Nonfiction", "Contemporary", "Thriller", "Science-Fiction", "Childrens",
+        "Owned", "Memoir", "Picture-Books", "Biography", "Horror", "History").sortedBy { it }
 
     private val binding: ActivityInitialGenreBinding by lazy {
         ActivityInitialGenreBinding.inflate(layoutInflater)
@@ -55,20 +32,21 @@ class InitialGenreActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         supportActionBar?.hide()
 
-        val layoutManager = StaggeredGridLayoutManager(3, GridLayoutManager.VERTICAL)
+        val layoutManager = GridLayoutManager(this, 2)
         binding.rvGenres.adapter = adapter
         binding.rvGenres.layoutManager = layoutManager
 
         binding.tvNext.setOnClickListener {
             val selectedGenresText = getSelectedGenresText()
-            Toast.makeText(this, selectedGenresText, Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, InitialBookActivity::class.java))
-            finish()
+            val intent = Intent(this, InitialBookActivity::class.java)
+            intent.putStringArrayListExtra(InitialBookActivity.EXTRA_GENRES, ArrayList(selectedGenresText))
+            startActivity(intent)
         }
+
+
     }
 
-    private fun getSelectedGenresText(): String {
-        val selectedGenres = adapter.getSelectedGenre()
-        return "Selected Genres: ${selectedGenres.joinToString(", ")}"
+    private fun getSelectedGenresText(): List<String> {
+        return adapter.getSelectedGenre()
     }
 }

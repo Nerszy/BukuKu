@@ -10,7 +10,7 @@ object ApiConfig {
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
         val client = okhttp3.OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://4c8a-2001-448a-2033-d7f-7d3f-86e8-ef61-394d.ngrok-free.app/")
+            .baseUrl("https://465b-114-5-250-254.ngrok-free.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

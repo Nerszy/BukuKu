@@ -9,7 +9,7 @@ import com.dicoding.bukuku.databinding.ItemRowGenreBinding
 class GenreAdapter(private val genres: List<String>) :
     RecyclerView.Adapter<GenreAdapter.GenreViewHolder>() {
 
-    private val selectedGenre = mutableSetOf<String>()
+    private val selectedGenre = mutableListOf<String>()
 
     inner class GenreViewHolder(val binding: ItemRowGenreBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -65,5 +65,5 @@ class GenreAdapter(private val genres: List<String>) :
         }
     }
 
-    fun getSelectedGenre(): Set<String> = selectedGenre
+    fun getSelectedGenre(): List<String> = selectedGenre
 }
