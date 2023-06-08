@@ -4,7 +4,6 @@ const db = require("./config/database")
 const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const body = require("body")
 
 mongoose.connect(db.mongoURL, {
     useNewUrlParser : true
