@@ -48,19 +48,15 @@ class GenreAdapter(private val genres: List<String>) :
 
             if (selectedGenre.contains(genre)) {
                 selectedGenre.remove(genre)
-            } else {
+            }
+            else {
                 if (selectedGenre.size < 3) {
                     selectedGenre.add(genre)
-                } else {
-                    // Show a message indicating that only 3 genres can be selected
-                    Toast.makeText(
-                        holder.itemView.context,
-                        "Only 3 genres can be selected",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                }
+                else {
+                    Toast.makeText(it.context, "Max 3 Genre", Toast.LENGTH_SHORT).show()
                 }
             }
-
             holder.updateSelectionBackground(genre)
         }
     }

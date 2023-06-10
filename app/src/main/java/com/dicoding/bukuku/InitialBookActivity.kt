@@ -2,18 +2,14 @@ package com.dicoding.bukuku
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.bukuku.databinding.ActivityInitialBookBinding
-import com.dicoding.bukuku.response.BooksItem
 import java.util.*
-import kotlin.collections.ArrayList
 
 class InitialBookActivity : AppCompatActivity() {
 
@@ -33,7 +29,8 @@ class InitialBookActivity : AppCompatActivity() {
         supportActionBar?.hide()
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        genres = intent.getStringArrayListExtra(EXTRA_GENRES) ?: emptyList() // Mendapatkan daftar genre dari Intent
+        genres = intent.getStringArrayListExtra(EXTRA_GENRES)
+            ?: emptyList() // Mendapatkan daftar genre dari Intent
 
         val layoutManagers = List(genres.size) { index ->
             if (index == 2) {
@@ -65,30 +62,48 @@ class InitialBookActivity : AppCompatActivity() {
             val genreLiveData = mBookByGenre.listBooksMap[lowercaseGenre]
             genreLiveData?.observe(this) { books ->
                 adapter.updateBooks(books)
-                Log.d("InitialBookActivity", "books: $books")
             }
         }
 
-        binding.tvNext.setOnClickListener {
-            val selectedBooks = getSelectedBooks()
-            Toast.makeText(this, selectedBooks, Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+        mBookByGenre.errorState.observe(this) { isError ->
+            if (isError) {
+                Toast.makeText(this, "An error occurred", Toast.LENGTH_SHORT).show()
+            }
         }
+
+        mBookByGenre.loadingState.observe(this) { isLoading ->
+            showLoading(isLoading)
+        }
+
+        binding.tvNext.setOnClickListener { onNextButtonClick() }
     }
 
-    private fun getSelectedBooks(): String {
+    private fun onNextButtonClick() {
+        val selectedBooks = getSelectedBooks()
+        Toast.makeText(this, listOf(selectedBooks).toString(), Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+
+    private fun getSelectedBooks(): List<Int> {
         val selectedBooks = adapters.flatMap { adapter ->
             adapter.getSelectedBookIds()
         }
-        return "Selected Books: ${selectedBooks.joinToString(",")}"
+        return selectedBooks
     }
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        binding.tvNext.isEnabled = !isLoading // Disable tombol Next saat sedang loading
+        if (isLoading) {
+            binding.tvNext.setOnClickListener(null) // Jangan beri action saat loading
+        } else {
+            binding.tvNext.setOnClickListener { onNextButtonClick() } // Beri action saat tidak loading
+        }
     }
 
     companion object {
         const val EXTRA_GENRES = "extra_genres"
     }
 }
+

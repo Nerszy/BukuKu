@@ -39,4 +39,18 @@
     <string name="favorite">Favorite</string>
     <string name="you_might_want_to_revisit_the_past">You might want to revisit the past~</string>
     <string name="retry">Retry</string>
+    <string name="description_about_us">Bukuku is an application that can help reader to find and read books easily. Difficulty in choosing the perfect book to read, motivate us to solve the problem through BukuKu. This project is a Capstone-based project for Bangkit Academy 2023 Batch 1.</string>
+    <string name="synopsys">Synopsys</string>
+    <string name="made_by">Made Proudly By C23-PR587</string>
+    <string name="pm">Project Management</string>
+    <string name="arif_dyah">Muhammad Arif Pangestu\nDyah Ayu Astuti (Asst.)</string>
+    <string name="cc">Cloud Computing</string>
+    <string name="arif_adi">Muhammad Arif Pangestu\nYahya Adi Rahman</string>
+    <string name="android">Android</string>
+    <string name="rafi">Muhammad Rafi Irfansyah</string>
+    <string name="ml">Machine Learning</string>
+    <string name="dyah_shafa_azizah">Dyah Ayu Astuti\nShafa Meira Wahyono\nNur Azizah Munir</string>
+    <string name="uiux">UI/UX Designer</string>
+    <string name="shafa_rafi">Shafa Meira Wahyono\nMuhammad Rafi Irfansyah</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>

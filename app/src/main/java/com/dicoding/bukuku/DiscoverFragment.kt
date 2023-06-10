@@ -23,7 +23,7 @@ class DiscoverFragment : Fragment() {
         DiscoveryBookAdapter()
     }
 
-    private lateinit var mSearch: SearchViewModel
+    private lateinit var mDiscover: DiscoverViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,12 +43,12 @@ class DiscoverFragment : Fragment() {
             footer = LoadingStateAdapter { adapter.retry() }
         )
 
-        val bookRepository = BookRepository(ApiConfig.getApiServices()) // Ganti dengan repository yang sesuai
+        val bookRepository = BookRepository(ApiConfig.getApiServices())
 
-        val viewModelFactory = SearchViewModelFactory(bookRepository)
-        mSearch = ViewModelProvider(this, viewModelFactory)[SearchViewModel::class.java]
+        val viewModelFactory = DiscoverViewModelFactory(bookRepository)
+        mDiscover = ViewModelProvider(this, viewModelFactory)[DiscoverViewModel::class.java]
 
-        mSearch.listBook.observe(viewLifecycleOwner) { bookList ->
+        mDiscover.listBook.observe(viewLifecycleOwner) { bookList ->
             if (bookList != null) {
                 adapter.submitData(viewLifecycleOwner.lifecycle, bookList)
             }
@@ -64,6 +64,10 @@ class DiscoverFragment : Fragment() {
             }
         })
 
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.pbRecyclerview.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     override fun onDestroyView() {

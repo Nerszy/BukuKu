@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/gardient"
+    tools:context=".AboutUsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="30dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="170dp"
+            android:layout_height="160dp"
+            android:layout_marginHorizontal="45dp"
+            android:src="@drawable/logo_buku"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/julius_sans_one"
+            android:text="@string/bukuku"
+            android:textColor="@color/red_blood"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:layout_alignStart="@id/imageView4"
+            android:layout_alignEnd="@id/imageView4"
+            android:layout_below="@id/imageView4" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:text="@string/description_about_us"
+            android:textAlignment="textStart"
+            android:layout_alignEnd="@id/textView4"
+            android:layout_alignStart="@id/textView4"
+            android:layout_below="@id/textView4"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/made_by"
+            android:layout_alignEnd="@id/textView5"
+            android:layout_alignStart="@id/textView5"
+            android:layout_below="@id/textView5"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_pm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/pm"
+            android:alpha="0.7"
+            android:layout_marginTop="16dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_alignEnd="@id/textView5"
+            android:layout_alignStart="@id/textView5"
+            android:layout_below="@id/textView6"/>
+
+        <TextView
+            android:id="@+id/tv_arif_dyah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/arif_dyah"
+            android:gravity="center"
+            android:layout_alignEnd="@id/textView5"
+            android:layout_alignStart="@id/textView5"
+            android:layout_below="@id/tv_pm"/>
+
+        <TextView
+            android:id="@+id/tv_cc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/cc"
+            android:alpha="0.7"
+            android:layout_marginTop="16dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_below="@+id/tv_arif_dyah"
+            android:layout_alignEnd="@id/tv_arif_dyah"
+            android:layout_alignStart="@id/tv_arif_dyah"/>
+
+        <TextView
+            android:id="@+id/tv_arif_adi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/arif_adi"
+            android:gravity="center"
+            android:layout_alignEnd="@id/tv_cc"
+            android:layout_alignStart="@id/tv_cc"
+            android:layout_below="@id/tv_cc"/>
+
+        <TextView
+            android:id="@+id/tv_android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/android"
+            android:alpha="0.7"
+            android:layout_marginTop="16dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_below="@+id/tv_arif_adi"
+            android:layout_alignEnd="@id/tv_arif_adi"
+            android:layout_alignStart="@id/tv_arif_adi"/>
+
+        <TextView
+            android:id="@+id/tv_rafi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/rafi"
+            android:gravity="center"
+            android:layout_alignEnd="@id/tv_android"
+            android:layout_alignStart="@id/tv_android"
+            android:layout_below="@id/tv_android"/>
+
+        <TextView
+            android:id="@+id/tv_ml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/ml"
+            android:alpha="0.7"
+            android:layout_marginTop="16dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_below="@id/tv_rafi"
+            android:layout_alignEnd="@id/tv_rafi"
+            android:layout_alignStart="@id/tv_rafi"/>
+
+        <TextView
+            android:id="@+id/tv_dyah_shafa_azizah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/dyah_shafa_azizah"
+            android:gravity="center"
+            android:layout_alignEnd="@id/tv_ml"
+            android:layout_alignStart="@id/tv_ml"
+            android:layout_below="@id/tv_ml"/>
+
+        <TextView
+            android:id="@+id/tv_uiux"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/uiux"
+            android:alpha="0.7"
+            android:layout_marginTop="16dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_below="@id/tv_dyah_shafa_azizah"
+            android:layout_alignEnd="@id/tv_dyah_shafa_azizah"
+            android:layout_alignStart="@id/tv_dyah_shafa_azizah"/>
+
+        <TextView
+            android:id="@+id/tv_shafa_rafi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/shafa_rafi"
+            android:gravity="center"
+            android:layout_alignEnd="@id/tv_uiux"
+            android:layout_alignStart="@id/tv_uiux"
+            android:layout_below="@id/tv_uiux"/>
+
+        <ImageView
+            android:id="@+id/img_arrow_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/ic_arrow_back_black" />
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -14,7 +14,7 @@ import com.dicoding.bukuku.response.BooksItem
 class InitialBookAdapter : RecyclerView.Adapter<InitialBookAdapter.BookViewHolder>() {
 
     private val books: ArrayList<BooksItem> = ArrayList()
-    private val selectedBookIds: ArrayList<String> = ArrayList()
+    private val selectedBookIds: ArrayList<Int> = ArrayList()
 
     inner class BookViewHolder(val binding: ItemBookRowBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -22,13 +22,15 @@ class InitialBookAdapter : RecyclerView.Adapter<InitialBookAdapter.BookViewHolde
             with(binding) {
                 Glide.with(itemView)
                     .load(book.urlImage)
+                    .override(200)
+                    .sizeMultiplier(0.5f)
                     .placeholder(R.drawable.sample_book)
                     .centerCrop()
                     .transform(RoundedCorners(15))
                     .into(imgBook)
                 tvBook.text = book.title
 
-                if (selectedBookIds.contains(book.id)) {
+                if (selectedBookIds.contains(book.booksId)) {
                     linearBook.setBackgroundResource(R.drawable.selected_book)
                     tvBook.setTypeface(null, Typeface.BOLD)
                 } else {
@@ -55,13 +57,13 @@ class InitialBookAdapter : RecyclerView.Adapter<InitialBookAdapter.BookViewHolde
         holder.bind(books[position])
 
         val book = books[position]
-        val isSelected = selectedBookIds.contains(book.id)
+        val isSelected = selectedBookIds.contains(book.booksId)
 
         holder.binding.imgBook.setOnClickListener {
             if (isSelected) {
-                selectedBookIds.remove(book.id)
+                selectedBookIds.remove(book.booksId)
             } else {
-                selectedBookIds.add(book.id)
+                selectedBookIds.add(book.booksId)
             }
             notifyItemChanged(position)
         }
@@ -76,7 +78,7 @@ class InitialBookAdapter : RecyclerView.Adapter<InitialBookAdapter.BookViewHolde
         diffResult.dispatchUpdatesTo(this)
     }
 
-    fun getSelectedBookIds(): ArrayList<String> = selectedBookIds
+    fun getSelectedBookIds(): ArrayList<Int> = selectedBookIds
 
     private class BookDiffCallback(
         private val oldBooks: ArrayList<BooksItem>,

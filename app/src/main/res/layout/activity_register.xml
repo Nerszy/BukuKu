@@ -168,12 +168,22 @@
             android:layout_below="@id/passwordInputLayout"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#E4384F"
+            android:backgroundTint="@color/button"
             android:fontFamily="@font/julius_sans_one"
             android:text="@string/sign_up"
             android:textColor="@color/white1"
             android:textStyle="bold"
             app:cornerRadius="15dp" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account"
+            android:textColor="@color/red_blood"
+            android:fontFamily="@font/julius_sans_one"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/btn_sign_up"/>
 
     </RelativeLayout>
 

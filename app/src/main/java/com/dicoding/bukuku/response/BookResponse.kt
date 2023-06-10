@@ -16,7 +16,7 @@ data class BooksItem(
     val author: String,
 
     @field:SerializedName("isbn")
-    val isbn: Int,
+    val isbn: String,
 
     @field:SerializedName("tags1")
     val tags1: String,

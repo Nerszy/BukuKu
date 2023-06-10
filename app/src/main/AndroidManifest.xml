@@ -15,6 +15,9 @@
         android:theme="@style/Theme.BukuKu"
         tools:targetApi="31">
         <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailBookActivity"
             android:exported="false" />
         <activity

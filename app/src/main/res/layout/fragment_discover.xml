@@ -34,5 +34,17 @@
         app:layout_constraintTop_toBottomOf="@+id/sv_search"
         tools:listitem="@layout/item_book_big" />
 
+    <ProgressBar
+        android:id="@+id/pb_recyclerview"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rv_book"
+        app:layout_constraintStart_toStartOf="@+id/rv_book"
+        app:layout_constraintTop_toTopOf="@+id/rv_book"
+        tools:visibility="visible" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

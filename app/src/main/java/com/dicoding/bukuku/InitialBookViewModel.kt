@@ -12,8 +12,10 @@ class InitialBookViewModel : ViewModel() {
     private val _listBooksMap = HashMap<String, MutableLiveData<ArrayList<BooksItem>>>()
     val listBooksMap: Map<String, LiveData<ArrayList<BooksItem>>> = _listBooksMap
     val loadingState = MutableLiveData<Boolean>()
+    val errorState = MutableLiveData<Boolean>()
 
     fun getBooksByGenre(genre: String) {
+        loadingState.value = true
         val genreLiveData = MutableLiveData<ArrayList<BooksItem>>()
         _listBooksMap[genre] = genreLiveData
 
@@ -25,13 +27,14 @@ class InitialBookViewModel : ViewModel() {
                 ) {
                     if (response.isSuccessful) {
                         genreLiveData.postValue(response.body()?.books)
-                        Log.d("responseBody", response.body()?.books.toString())
-                        Log.d("genre", genre)
+                        loadingState.value = false
                     }
                 }
 
                 override fun onFailure(call: Call<BookResponse>, t: Throwable) {
                     Log.d("Failure", t.message.toString())
+                    loadingState.value = false
+                    errorState.value = true
                 }
             })
     }

@@ -28,6 +28,7 @@ class DiscoveryBookAdapter : PagingDataAdapter<BooksItem, DiscoveryBookAdapter.V
             tvBookTitle.text = book?.title
             Glide.with(holder.itemView.context)
                 .load(book?.urlImage)
+                .sizeMultiplier(0.5f)
                 .placeholder(R.drawable.sample_book)
                 .optionalFitCenter()
                 .transform(RoundedCorners(30))

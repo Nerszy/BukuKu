@@ -15,7 +15,8 @@ class InitialGenreActivity : AppCompatActivity() {
     private val genre = listOf(
         "Fiction", "Non-Fiction", "Young-Adult", "Fantasy", "Classics", "Historical-Fiction", "Mystery",
         "Book-Club", "Romance", "Nonfiction", "Contemporary", "Thriller", "Science-Fiction", "Childrens",
-        "Owned", "Memoir", "Picture-Books", "Biography", "Horror", "History").sortedBy { it }
+        "Owned", "Memoir", "Picture-Books", "Biography", "Horror", "History"
+    ).sortedBy { it }
 
     private val binding: ActivityInitialGenreBinding by lazy {
         ActivityInitialGenreBinding.inflate(layoutInflater)
@@ -37,13 +38,18 @@ class InitialGenreActivity : AppCompatActivity() {
         binding.rvGenres.layoutManager = layoutManager
 
         binding.tvNext.setOnClickListener {
-            val selectedGenresText = getSelectedGenresText()
-            val intent = Intent(this, InitialBookActivity::class.java)
-            intent.putStringArrayListExtra(InitialBookActivity.EXTRA_GENRES, ArrayList(selectedGenresText))
-            startActivity(intent)
+            val selectedGenres = adapter.getSelectedGenre()
+
+            if (selectedGenres.size == 3) {
+                val selectedGenresText = getSelectedGenresText()
+                val intent = Intent(this, InitialBookActivity::class.java)
+                intent.putStringArrayListExtra(InitialBookActivity.EXTRA_GENRES, ArrayList(selectedGenresText))
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Please choose 3 genres", Toast.LENGTH_SHORT).show()
+            }
         }
-
-
     }
 
     private fun getSelectedGenresText(): List<String> {

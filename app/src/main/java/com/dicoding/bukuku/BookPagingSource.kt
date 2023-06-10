@@ -27,6 +27,6 @@ class BookPagingSource(private val apiService: BookApiService) : PagingSource<In
     }
 
     private companion object {
-        const val INITIAL_PAGE_INDEX = 1
+        const val INITIAL_PAGE_INDEX = 0
     }
 }

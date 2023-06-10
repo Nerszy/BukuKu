@@ -65,6 +65,7 @@
             app:boxStrokeWidth="2dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppins"
@@ -104,6 +105,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/poppins"
@@ -121,7 +123,7 @@
             android:layout_below="@id/passwordInputLayout"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#E4384F"
+            android:backgroundTint="@color/button"
             android:fontFamily="@font/julius_sans_one"
             android:text="@string/login"
             android:textStyle="bold"

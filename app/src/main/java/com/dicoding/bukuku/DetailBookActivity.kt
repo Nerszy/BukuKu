@@ -2,11 +2,23 @@ package com.dicoding.bukuku
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.text.Html
+import android.text.Spannable
+import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
+import android.text.style.RelativeSizeSpan
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.MenuItem
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.dicoding.bukuku.databinding.ActivityDetailBookBinding
 
@@ -25,8 +37,14 @@ class DetailBookActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        // set home as up
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+            title = "back"
+
+            val colorDrawable = ColorDrawable(ContextCompat.getColor(this@DetailBookActivity, R.color.background))
+            setBackgroundDrawable(colorDrawable)
+        }
 
         val id = intent.getIntExtra(EXTRA_ID, 0)
 
@@ -53,19 +71,19 @@ class DetailBookActivity : AppCompatActivity() {
                 }
                 Glide.with(this)
                     .load(listBook.urlImage)
+                    .sizeMultiplier(0.7f)
                     .skipMemoryCache(true)
                     .placeholder(R.drawable.sample_book)
-                    .centerCrop()
                     .into(binding.imgBook)
             }
         }
     }
 
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
                 onBackPressed()
-                finish()
                 return true
             }
         }

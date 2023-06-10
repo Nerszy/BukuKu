@@ -16,4 +16,6 @@
     <color name="red_blood">#6A0C18</color>
     <color name="white1">#FFFBFB</color>
     <color name="white2">#FEF7EA</color>
+    <color name="navbar">#C8B696</color>
+    <color name="button">#E4384F</color>
 </resources>

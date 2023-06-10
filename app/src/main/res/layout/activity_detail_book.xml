@@ -64,7 +64,7 @@
                 android:alpha="0.7"
                 android:fontFamily="@font/poppins"
                 android:justificationMode="inter_word"
-                android:text="@string/book_title"
+                android:text="@string/synopsys"
                 android:textAlignment="textStart"
                 tools:ignore="RtlCompat"
                 tools:targetApi="o" />
