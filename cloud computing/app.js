@@ -22,6 +22,10 @@ app.use(bodyParser.urlencoded({
     limit: '50mb'
 }))
 app.use('/user', require('./routes/user-routes'))
+app.use('/history', require('./routes/history-routes'))
+
+const bookRoutes = require('./routes/book-routes')
+app.use(bookRoutes)
 
 const port = process.env.PORT || 8000
 app.listen(port, () => console.log(`server telah berjalan di ${port}`))
