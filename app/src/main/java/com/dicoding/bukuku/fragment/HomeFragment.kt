@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,8 +12,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.bukuku.DetailBookActivity
 import com.dicoding.bukuku.databinding.FragmentHomeBinding
 import com.dicoding.bukuku.response.BooksItem
+import com.dicoding.bukuku.search.SearchAdapter
+import com.dicoding.bukuku.search.SearchViewModel
 
 class HomeFragment : Fragment() {
 

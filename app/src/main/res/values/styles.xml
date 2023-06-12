@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="Widget.Theme.BukuKu.ActionBar.Fullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Widget.Theme.BukuKu.ActionBar.Fullscreen" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:background">@color/black_overlay</item>
     </style>
 

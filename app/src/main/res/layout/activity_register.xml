@@ -8,6 +8,7 @@
     tools:context=".RegisterActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/background"
@@ -57,6 +58,7 @@
             android:layout_below="@id/textView2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
+            app:errorEnabled="false"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -100,6 +102,7 @@
             android:layout_below="@id/tv_username"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
+            app:errorEnabled="false"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -140,6 +143,7 @@
             android:layout_below="@id/tv_password"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
+            app:errorEnabled="false"
             app:boxCornerRadiusBottomEnd="10dp"
             app:boxCornerRadiusBottomStart="10dp"
             app:boxCornerRadiusTopEnd="10dp"
@@ -183,9 +187,22 @@
             android:textColor="@color/red_blood"
             android:fontFamily="@font/julius_sans_one"
             android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
             android:layout_below="@id/btn_sign_up"/>
 
     </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_search"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="@id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@id/relativeLayout"
+        app:layout_constraintBottom_toBottomOf="@id/relativeLayout"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

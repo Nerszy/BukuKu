@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.tools
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

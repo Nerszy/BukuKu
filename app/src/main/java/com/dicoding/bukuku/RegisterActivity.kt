@@ -39,15 +39,11 @@ class RegisterActivity : AppCompatActivity() {
     private fun signUp() {
         binding.edtEmail.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if (validateEmail(binding.edtEmail.text.toString())) {
-                    binding.edtEmail.error = null
-                } else {
-                    binding.edtEmail.error = "Email not valid"
-                }
+               binding.edtEmail.error = null
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                binding.edtEmail.error = null
+                // Do nothing
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -57,10 +53,11 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.edtUsername.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
+                binding.edtUsername.error = null
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                binding.edtUsername.error = null
+                //Do nothing
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -70,17 +67,11 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.edtPassword.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if (validatePassword(binding.edtPassword.text.toString())) {
-                    binding.edtPassword.error = null
-                    binding.passwordInputLayout.isErrorEnabled = false
-                } else {
-                    binding.edtPassword.error = "Password minimum 8 characters"
-                    binding.passwordInputLayout.isErrorEnabled = true
-                }
+                binding.edtPassword.error = null
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                binding.edtPassword.error = null
+                // Do nothing
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -96,17 +87,27 @@ class RegisterActivity : AppCompatActivity() {
             val passwordError = binding.edtPassword.error
 
             if (email.isEmpty()) {
-                binding.edtEmail.error = "Email must be filled"
+                Toast.makeText(this, "Email must be filled", Toast.LENGTH_SHORT).show()
+                binding.edtEmail.requestFocus()
+                return@setOnClickListener
+            }
+            if (!validateEmail(email)) {
+                Toast.makeText(this, "Invalid email format", Toast.LENGTH_SHORT).show()
                 binding.edtEmail.requestFocus()
                 return@setOnClickListener
             }
             if (username.isEmpty()) {
-                binding.edtUsername.error = "Username must be filled"
+                Toast.makeText(this, "Username must be filled", Toast.LENGTH_SHORT).show()
                 binding.edtUsername.requestFocus()
                 return@setOnClickListener
             }
             if (password.isEmpty()) {
-                binding.edtPassword.error = "Password must be filled"
+                Toast.makeText(this, "Password must be filled", Toast.LENGTH_SHORT).show()
+                binding.edtPassword.requestFocus()
+                return@setOnClickListener
+            }
+            if (!validatePassword(password)) {
+                Toast.makeText(this, "Password must be at least 8 characters", Toast.LENGTH_SHORT).show()
                 binding.edtPassword.requestFocus()
                 return@setOnClickListener
             }

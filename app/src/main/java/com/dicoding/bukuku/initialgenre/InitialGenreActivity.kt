@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.initialgenre
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,8 +6,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.dicoding.bukuku.databinding.ActivityInitialGenreBinding
+import com.dicoding.bukuku.initialbook.InitialBookActivity
 
 @Suppress("DEPRECATION")
 class InitialGenreActivity : AppCompatActivity() {

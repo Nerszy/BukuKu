@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dicoding.bukuku.databinding.FragmentDiscoverBinding
+import com.dicoding.bukuku.AboutUsActivity
 import com.dicoding.bukuku.databinding.FragmentProfileBinding
 import com.dicoding.bukuku.login.LoginActivity
 

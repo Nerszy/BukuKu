@@ -4,6 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.dicoding.bukuku.databinding.ActivityMainBinding
+import com.dicoding.bukuku.fragment.DiscoverFragment
+import com.dicoding.bukuku.fragment.HomeFragment
+import com.dicoding.bukuku.fragment.LibraryFragment
+import com.dicoding.bukuku.fragment.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 

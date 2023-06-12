@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.tools
 
 import com.dicoding.bukuku.response.AuthorizationResponse
 import com.dicoding.bukuku.response.BookPagingResponse

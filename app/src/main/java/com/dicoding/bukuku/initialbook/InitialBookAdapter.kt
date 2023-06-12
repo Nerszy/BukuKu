@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.initialbook
 
 import android.annotation.SuppressLint
 import android.graphics.Typeface
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.dicoding.bukuku.R
 import com.dicoding.bukuku.databinding.ItemBookRowBinding
 import com.dicoding.bukuku.response.BooksItem
 

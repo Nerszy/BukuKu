@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.dicoding.bukuku.tools.ApiConfig
+import com.dicoding.bukuku.tools.BookRepository
+import com.dicoding.bukuku.DetailBookActivity
+import com.dicoding.bukuku.tools.LoadingStateAdapter
 import com.dicoding.bukuku.databinding.FragmentDiscoverBinding
+import com.dicoding.bukuku.discover.DiscoverViewModel
+import com.dicoding.bukuku.discover.DiscoverViewModelFactory
+import com.dicoding.bukuku.discover.DiscoveryBookAdapter
 import com.dicoding.bukuku.response.BooksItem
-import kotlinx.coroutines.launch
 
 class DiscoverFragment : Fragment() {
 

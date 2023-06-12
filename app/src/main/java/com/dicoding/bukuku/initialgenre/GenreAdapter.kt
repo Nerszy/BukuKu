@@ -1,9 +1,10 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.initialgenre
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.bukuku.R
 import com.dicoding.bukuku.databinding.ItemRowGenreBinding
 
 class GenreAdapter(private val genres: List<String>) :
@@ -32,7 +33,7 @@ class GenreAdapter(private val genres: List<String>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): GenreAdapter.GenreViewHolder {
+    ): GenreViewHolder {
         val binding =
             ItemRowGenreBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return GenreViewHolder(binding)
@@ -40,7 +41,7 @@ class GenreAdapter(private val genres: List<String>) :
 
     override fun getItemCount(): Int = genres.size
 
-    override fun onBindViewHolder(holder: GenreAdapter.GenreViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: GenreViewHolder, position: Int) {
         holder.bind(genres[position])
 
         holder.binding.tvGenre.setOnClickListener {

@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.search
 
 
 import android.view.LayoutInflater

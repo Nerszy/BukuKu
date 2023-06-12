@@ -21,13 +21,10 @@
             android:name=".DetailBookActivity"
             android:exported="false" />
         <activity
-            android:name=".LibraryActivity"
+            android:name=".initialbook.InitialBookActivity"
             android:exported="false" />
         <activity
-            android:name=".InitialBookActivity"
-            android:exported="false" />
-        <activity
-            android:name=".InitialGenreActivity"
+            android:name=".initialgenre.InitialGenreActivity"
             android:exported="false" />
         <activity
             android:name=".login.LoginActivity"

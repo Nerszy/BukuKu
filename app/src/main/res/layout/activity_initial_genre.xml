@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="@drawable/gardient"
-    tools:context=".InitialGenreActivity">
+    tools:context=".initialgenre.InitialGenreActivity">
 
     <TextView
         android:id="@+id/tv_choose"

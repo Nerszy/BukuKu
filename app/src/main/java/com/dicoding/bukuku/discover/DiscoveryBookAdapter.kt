@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.discover
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,10 +7,13 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.dicoding.bukuku.R
 import com.dicoding.bukuku.databinding.ItemBookBigBinding
 import com.dicoding.bukuku.response.BooksItem
 
-class DiscoveryBookAdapter : PagingDataAdapter<BooksItem, DiscoveryBookAdapter.ViewHolder>(DIFF_CALLBACK) {
+class DiscoveryBookAdapter : PagingDataAdapter<BooksItem, DiscoveryBookAdapter.ViewHolder>(
+    DIFF_CALLBACK
+) {
 
     private var onItemClickCallback: OnItemClickCallback? = null
 

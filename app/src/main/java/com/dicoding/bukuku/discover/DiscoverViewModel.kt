@@ -1,8 +1,9 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.discover
 
 import androidx.lifecycle.*
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
+import com.dicoding.bukuku.tools.BookRepository
 import com.dicoding.bukuku.response.BooksItem
 
 class DiscoverViewModel(bookRepository: BookRepository) : ViewModel() {

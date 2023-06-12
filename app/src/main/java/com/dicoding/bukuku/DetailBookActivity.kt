@@ -40,11 +40,13 @@ class DetailBookActivity : AppCompatActivity() {
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
-            title = "back"
+            setHomeAsUpIndicator(R.drawable.ic_back_icon)
+            title = "Back"
 
             val colorDrawable = ColorDrawable(ContextCompat.getColor(this@DetailBookActivity, R.color.background))
             setBackgroundDrawable(colorDrawable)
         }
+
 
         val id = intent.getIntExtra(EXTRA_ID, 0)
 

@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.dicoding.bukuku.response.BooksItem
+import com.dicoding.bukuku.tools.ApiConfig
 import retrofit2.*
 
 class DetailBookViewModel: ViewModel() {

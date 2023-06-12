@@ -3,6 +3,7 @@ package com.dicoding.bukuku
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.dicoding.bukuku.response.BooksItem
+import com.dicoding.bukuku.tools.BookApiService
 
 class BookPagingSource(private val apiService: BookApiService) : PagingSource<Int, BooksItem>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, BooksItem> {

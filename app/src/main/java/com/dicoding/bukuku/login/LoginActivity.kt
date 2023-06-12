@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.bukuku.AuthorizationViewModel
-import com.dicoding.bukuku.InitialGenreActivity
+import com.dicoding.bukuku.initialgenre.InitialGenreActivity
 import com.dicoding.bukuku.RegisterActivity
 import com.dicoding.bukuku.databinding.ActivityLoginBinding
 
@@ -54,7 +54,6 @@ class LoginActivity : AppCompatActivity() {
         binding.etPassword.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 binding.etPassword.error = null
-                binding.passwordInputLayout.isErrorEnabled = false
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -69,17 +68,24 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val username = binding.etUsername.text.toString()
             val password = binding.etPassword.text.toString()
+
             val usernameError = binding.etUsername.error
             val passwordError = binding.etPassword.error
 
             if (username.isEmpty()) {
-                binding.etUsername.error = "Username must be filled"
+                Toast.makeText(this, "Username must be filled", Toast.LENGTH_SHORT).show()
                 binding.etUsername.requestFocus()
                 return@setOnClickListener
             }
 
             if (password.isEmpty()) {
-                binding.etPassword.error = "Password must be filled"
+                Toast.makeText(this, "Password must be filled", Toast.LENGTH_SHORT).show()
+                binding.etPassword.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (!isPasswordValid(password)) {
+                Toast.makeText(this, "Password must be at least 8 characters", Toast.LENGTH_SHORT).show()
                 binding.etPassword.requestFocus()
                 return@setOnClickListener
             }
@@ -105,10 +111,15 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
                     // Add your desired logic here
                     startActivity(Intent(this, InitialGenreActivity::class.java))
+                    finish()
                 } else {
                     Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
         }
+    }
+
+    private fun isPasswordValid(password: String): Boolean {
+        return password.length >= 8
     }
 }

@@ -1,9 +1,10 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.initialbook
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.dicoding.bukuku.tools.ApiConfig
 import com.dicoding.bukuku.response.BookResponse
 import com.dicoding.bukuku.response.BooksItem
 import retrofit2.*

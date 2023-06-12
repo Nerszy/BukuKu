@@ -1,4 +1,4 @@
-package com.dicoding.bukuku
+package com.dicoding.bukuku.tools
 
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +10,7 @@ object ApiConfig {
             HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
         val client = okhttp3.OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://0a94-114-5-250-254.ngrok-free.app/")
+            .baseUrl("https://c873-114-5-250-254.ngrok-free.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
