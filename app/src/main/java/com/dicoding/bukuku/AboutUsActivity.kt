@@ -18,6 +18,7 @@ class AboutUsActivity : AppCompatActivity() {
 
         binding.imgArrowBack.setOnClickListener {
             onBackPressed()
+            finish()
         }
     }
 }

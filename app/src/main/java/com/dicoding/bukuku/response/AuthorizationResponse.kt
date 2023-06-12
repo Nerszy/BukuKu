@@ -7,5 +7,8 @@ data class AuthorizationResponse(
 	val err: Boolean,
 
 	@field:SerializedName("message")
-	val message: String
+	val message: String,
+
+	@field:SerializedName("username")
+	val username: String
 )

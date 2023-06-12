@@ -1,13 +1,25 @@
 package com.dicoding.bukuku
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.dicoding.bukuku.databinding.ActivityMainBinding
 import com.dicoding.bukuku.fragment.DiscoverFragment
 import com.dicoding.bukuku.fragment.HomeFragment
 import com.dicoding.bukuku.fragment.LibraryFragment
 import com.dicoding.bukuku.fragment.ProfileFragment
+import com.dicoding.bukuku.login.LoginActivity
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user")
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,39 +29,67 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var currentFragment: Fragment
 
+    private val userPreference: UserPreference by lazy {
+        UserPreference.getInstance(dataStore)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         supportActionBar?.hide()
 
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.iconHome -> {
-                    replaceFragment(HomeFragment())
-                    true
+        setupView()
+    }
+
+    private fun setupView(){
+        lifecycleScope.launch {
+            try {
+                val user = userPreference.getUser().first()
+                if (user.isLogin) {
+                    if (userPreference.isSessionExpired()) {
+                        Toast.makeText(this@MainActivity, "Session Expired", Toast.LENGTH_SHORT)
+                            .show()
+                        userPreference.logoutUser()
+                        startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                        finish()
+                    } else {
+                        binding.bottomNavigation.setOnItemSelectedListener { item ->
+                            when (item.itemId) {
+                                R.id.iconHome -> {
+                                    replaceFragment(HomeFragment())
+                                    true
+                                }
+                                R.id.iconLibrary -> {
+                                    replaceFragment(LibraryFragment())
+                                    true
+                                }
+                                R.id.iconDiscover -> {
+                                    replaceFragment(DiscoverFragment())
+                                    true
+                                }
+                                R.id.iconProfile -> {
+                                    replaceFragment(ProfileFragment())
+                                    true
+                                }
+                                else -> false
+                            }
+                        }
+
+                        // Set HomeFragment as the default fragment
+                        currentFragment = HomeFragment()
+                        supportFragmentManager.beginTransaction()
+                            .replace(R.id.frame_container, currentFragment)
+                            .commit()
+                    }
+                } else {
+                    startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                    finish()
                 }
-                R.id.iconLibrary -> {
-                    replaceFragment(LibraryFragment())
-                    true
-                }
-                R.id.iconDiscover -> {
-                    replaceFragment(DiscoverFragment())
-                    true
-                }
-                R.id.iconProfile -> {
-                    replaceFragment(ProfileFragment())
-                    true
-                }
-                else -> false
+            } catch (e: Exception) {
+                Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_SHORT).show()
             }
         }
-
-        // Set HomeFragment as the default fragment
-        currentFragment = HomeFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.frame_container, currentFragment)
-            .commit()
     }
 
     private fun replaceFragment(fragment: Fragment) {

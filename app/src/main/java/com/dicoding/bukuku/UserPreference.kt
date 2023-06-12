@@ -11,29 +11,32 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     fun getUser(): Flow<UserModel> {
         return dataStore.data.map { preferences ->
             UserModel(
-                preferences[NAME_KEY] ?: "",
+                preferences[USERNAME_KEY] ?: "",
                 preferences[STATE_KEY] ?: false
             )
         }
     }
 
-    suspend fun saveUser(name: String, isLogin: Boolean) {
+    suspend fun saveUser(username: String, isLogin: Boolean) {
         dataStore.edit { preferences ->
-            preferences[NAME_KEY] = name
+            preferences[USERNAME_KEY] = username
             preferences[STATE_KEY] = isLogin
             preferences[LAST_LOGIN_TIME_KEY] = System.currentTimeMillis()
         }
     }
 
-    suspend fun login() {
+    suspend fun loginUser() {
         dataStore.edit { preferences ->
             preferences[STATE_KEY] = true
             preferences[LAST_LOGIN_TIME_KEY] = System.currentTimeMillis()
         }
     }
 
-    suspend fun logout() {
+    suspend fun logoutUser() {
         dataStore.edit { preferences ->
+            preferences[STATE_KEY] = false
+            preferences[USERNAME_KEY] = ""
+            preferences[LAST_LOGIN_TIME_KEY] = 0L
             preferences.clear()
         }
     }
@@ -47,7 +50,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
 
     companion object {
         private const val ONE_HOUR_IN_MILLIS = 3_600_000 // 1 hour in milliseconds
-        private val NAME_KEY = stringPreferencesKey("name")
+        private val USERNAME_KEY = stringPreferencesKey("username")
         private val STATE_KEY = booleanPreferencesKey("state")
         private val LAST_LOGIN_TIME_KEY = longPreferencesKey("last_login_time")
 
