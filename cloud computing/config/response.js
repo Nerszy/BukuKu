@@ -26,5 +26,11 @@ module.exports = {
             message : 'Login Succesfully',
             data : data
         }
+    },
+    HistoryMessage : (message) => {
+        return {
+            err: false,
+            message : message
+        }
     }
 }
