@@ -34,7 +34,12 @@ exports.login = (data) =>
         .then(user => {
             if(user){
                 if(bcrypt.compareSync(data.password, user.password)){
-                    resolve(response.Result(user))
+                  const response = {
+                    err: false,
+                    message: "Login Succesfully",
+                    username: user.username
+                  };
+                  resolve(response)
                 }else {
                     reject(response.ErrorMessage('Wrong Password'))
                 }
