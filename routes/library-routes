@@ -1,0 +1,11 @@
+const express = require('express');
+const routes = express.Router();
+
+const bookController = require('../controllers/library-controllers');
+
+routes.get('/books', bookController.getBooks);
+routes.post('/books/:id/buy', bookController.buyBook);
+routes.get('/library', bookController.getLibrary);
+routes.get('/yourLibrary', bookController.yourLibrary);
+
+module.exports = routes;

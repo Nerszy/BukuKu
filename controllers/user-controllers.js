@@ -5,10 +5,14 @@ const response = require('../config/response')
 
 exports.regis = (data) => 
     new Promise((resolve, reject) => {
-        userModel.findOne({email: data.email})
+        userModel.findOne({$or: [{email: data.email}, {username: data.username}]})
             .then(user => {
                 if (user){
-                    resolve(response.ErrorMessage('Email has been used'))
+                    if (user.email === data.email) {
+                        resolve(response.ErrorMessage('Email has been used'))
+                    } else {
+                        resolve(response.ErrorMessage('Username has been used'))
+                    }
                 }else {
                     bcrypt.hash(data.password, 10, (err, hash) => {
                         if (err) {
@@ -39,3 +43,36 @@ exports.login = (data) =>
             }
         })
     })
+
+exports.changePassword = (data) =>
+    new Promise((resolve, reject) => {
+      userModel.findOne({ username: data.username })
+        .then(user => {
+          if (user) {
+            bcrypt.compare(data.currentPassword, user.password, (err, result) => {
+              if (err) {
+                reject(response.ErrorMessage('Error comparing passwords'));
+              } else {
+                if (result) {
+                  bcrypt.hash(data.newPassword, 10, (err, hash) => {
+                    if (err) {
+                      reject(response.ErrorMessage('Error hashing password'));
+                    } else {
+                      user.password = hash;
+                      user.save()
+                        .then(() => resolve(response.SuccessMessage('Password changed successfully')))
+                        .catch(() => reject(response.ErrorMessage('Failed to change password')));
+                    }
+                  });
+                } else {
+                  reject(response.ErrorMessage('Current password is incorrect'));
+                }
+              }
+            });
+          } else {
+            reject(response.ErrorMessage('User not found'));
+          }
+        })
+        .catch(() => reject(response.Error));
+    });
+  
