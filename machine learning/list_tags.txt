@@ -1,0 +1,67 @@
+List Tags1 terbanyak
+1.	fiction
+2.	non-fiction
+3.	young-adult
+4.	fantasy
+5.	classics
+6.	historical-fiction
+7.	mystery
+8.	book-club
+9.	romance
+10.	nonfiction
+11.	contemporary
+12.	thriller
+13.	science-fiction
+14.	childrens
+15.	owned
+16.	memoir
+17.	picture-books
+18.	biography
+19.	horror
+20.	history
+
+
+List Tags2 terbanyak
+1.	fiction
+2.	non-fiction
+3.	fantasy
+4.	classics
+5.	romance
+6.	historical-fiction
+7.	mystery
+8.	book-club
+9.	nonfiction
+10.	young-adult
+11.	childrens
+12.	ya
+13.	books-i-own
+14.	contemporary
+15.	history
+16.	children-s-books
+17.	paranormal
+18.	sci-fi
+19.	memoir
+20.	biography
+
+
+List Tags3 terbanyak
+1.	fiction
+2.	non-fiction
+3.	young-adult
+4.	fantasy
+5.	classics
+6.	historical-fiction
+7.	mystery
+8.	romance
+9.	nonfiction
+10.	ya
+11.	childrens
+12.	thriller
+13.	book-club
+14.	science-fiction
+15.	horror
+16.	history
+17.	sci-fi
+18.	owned
+19.	books-i-own
+20.	memoir
