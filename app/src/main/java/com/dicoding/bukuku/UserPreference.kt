@@ -44,12 +44,12 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     suspend fun isSessionExpired(): Boolean {
         val lastLoginTime = dataStore.data.first()[LAST_LOGIN_TIME_KEY] ?: 0L
         val currentTime = System.currentTimeMillis()
-        return (currentTime - lastLoginTime) > ONE_HOUR_IN_MILLIS
+        return (currentTime - lastLoginTime) > SEVEN_DAYS
     }
 
 
     companion object {
-        private const val ONE_HOUR_IN_MILLIS = 3_600_000 // 1 hour in milliseconds
+        private const val SEVEN_DAYS = 604_800_000 // 7 days in milliseconds
         private val USERNAME_KEY = stringPreferencesKey("username")
         private val STATE_KEY = booleanPreferencesKey("state")
         private val LAST_LOGIN_TIME_KEY = longPreferencesKey("last_login_time")

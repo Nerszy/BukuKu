@@ -12,6 +12,7 @@ import com.dicoding.bukuku.MainActivity
 import com.dicoding.bukuku.databinding.ActivityInitialBookBinding
 import java.util.*
 
+@Suppress("DEPRECATION")
 class InitialBookActivity : AppCompatActivity() {
 
     private val binding: ActivityInitialBookBinding by lazy {

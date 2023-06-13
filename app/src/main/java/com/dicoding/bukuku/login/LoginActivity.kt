@@ -1,5 +1,6 @@
 package com.dicoding.bukuku.login
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -8,10 +9,14 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.dicoding.bukuku.AuthorizationViewModel
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import com.dicoding.bukuku.*
 import com.dicoding.bukuku.initialgenre.InitialGenreActivity
-import com.dicoding.bukuku.RegisterActivity
 import com.dicoding.bukuku.databinding.ActivityLoginBinding
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user")
 
 @Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
@@ -95,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            authViewModel.setLogin(username, password)
+            authViewModel.setLogin(username, password, userPreference = UserPreference.getInstance(dataStore))
         }
 
         authViewModel.error.observe(this) { error ->
@@ -110,7 +115,7 @@ class LoginActivity : AppCompatActivity() {
                     // Login successful
                     Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
                     // Add your desired logic here
-                    startActivity(Intent(this, InitialGenreActivity::class.java))
+                    startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {
                     Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()

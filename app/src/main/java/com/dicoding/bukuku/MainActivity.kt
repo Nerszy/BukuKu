@@ -3,6 +3,7 @@ package com.dicoding.bukuku
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 val user = userPreference.getUser().first()
+                Log.d("MainActivity", "setupView: $user")
                 if (user.isLogin) {
                     if (userPreference.isSessionExpired()) {
                         Toast.makeText(this@MainActivity, "Session Expired", Toast.LENGTH_SHORT)
