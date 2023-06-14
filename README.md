@@ -41,3 +41,8 @@ Team ID		: C23-PR587
 | Dyah Ayu Astuti       | <a href="https://www.linkedin.com/in/dyah-ayu-astuti-17b190216/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> <a href="mailto:dyahayuastuti7@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>                    |
 | Shafa Meira Wahyono   | <a href="https://www.linkedin.com/in/shafa-meira-wahyono-b861a01b6/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> <a href="mailto:meirashaf@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>                |
 | Nur Azizah Munir | <a href="https://www.linkedin.com/in/nur-azizah-munir-697903210/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a> <a href="mailto:nurazizahmunir2@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>                       |
+
+<p align="center">
+<img src="https://github.com/Nerszy/BukuKu/blob/main/bangkit-logo.png" height="200">
+<img src="https://github.com/Nerszy/BukuKu/blob/main/kampusmerdeka.png" height="150">
+</p>
