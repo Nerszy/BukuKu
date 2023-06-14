@@ -3,9 +3,14 @@
 </p>
 <h1 align="center">BukuKu</h1>
 
- <p align="center">
+<p align="center">
   This is a project to fulfill the  <a href="https://grow.google/intl/id_id/bangkit/"><strong>Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</strong></a>
-   Program. </p>
+   Program.
+ <br>
+ <br />
+    <a href="https://github.com/Nerszy/BukuKu"><strong>Explore the docs »</strong></a>
+    <br />
+ </p>
   
 ## About The Project
 The goal of BukuKu is to provide users with relevant and personalized book recommendations that match their interests and needs.
