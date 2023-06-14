@@ -1,3 +1,6 @@
+<p align="center">
+<img src="https://github.com/Nerszy/BukuKu/blob/main/logo%20bukuku.png" height="150">
+</p>
 <h1 align="center">BukuKu</h1>
 
  <p align="center">
