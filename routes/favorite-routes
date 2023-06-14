@@ -1,0 +1,10 @@
+const express = require('express');
+const routes = express.Router();
+
+const favoriteBookController = require('../controllers/favorite-controllers');
+
+routes.get('/getFavorite', favoriteBookController.getFavoriteBooks);
+routes.post('/addFavorite', favoriteBookController.addFavoriteBook);
+routes.delete('/removeFavorite', favoriteBookController.removeFavoriteBook);
+
+module.exports = routes;

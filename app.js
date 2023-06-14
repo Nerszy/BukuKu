@@ -4,7 +4,6 @@ const db = require("./config/database")
 const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const body = require("body")
 
 mongoose.connect(db.mongoURL, {
     useNewUrlParser : true
@@ -23,6 +22,16 @@ app.use(bodyParser.urlencoded({
     limit: '50mb'
 }))
 app.use('/user', require('./routes/user-routes'))
+app.use('/history', require('./routes/history-routes'))
+
+const bookRoutes = require('./routes/book-routes')
+app.use(bookRoutes)
+
+const favoriteRoutes = require('./routes/favorite-routes')
+app.use('/favorite', favoriteRoutes)
+
+const libraryRoutes = require('./routes/library-routes')
+app.use('/library', libraryRoutes)
 
 const port = process.env.PORT || 8000
 app.listen(port, () => console.log(`server telah berjalan di ${port}`))

@@ -23,8 +23,14 @@ module.exports = {
     Result: (data) => {
         return {
             err : false,
-            message : 'Data Berhasil Dimuat',
+            message : 'Login Succesfully',
             data : data
+        }
+    },
+    HistoryMessage : (message) => {
+        return {
+            err: false,
+            message : message
         }
     }
 }
