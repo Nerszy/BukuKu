@@ -44,5 +44,5 @@ Team ID		: C23-PR587
 
 <p align="center">
 <img src="https://github.com/Nerszy/BukuKu/blob/main/bangkit-logo.png" height="200">
-<img src="https://github.com/Nerszy/BukuKu/blob/main/kampusmerdeka.png" height="150">
+<img src="https://github.com/Nerszy/BukuKu/blob/main/kampusmerdeka.png" height="100">
 </p>
