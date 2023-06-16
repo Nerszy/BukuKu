@@ -1,38 +1,36 @@
 const Library = require('../model/library-model');
-const response = require('../config/response');
 
-exports.addBookToLibrary = (username, books_id) => {
-  return new Promise((resolve, reject) => {
-    Library.findOne({ username: username, books_id: books_id })
-      .then((existingBook) => {
-        if (existingBook) {
-          reject(response.ErrorMessage('Book already exists in library'));
-        } else {
-          const library = new Library({
-            username: username,
-            books_id: books_id,
-          });
+module.exports = {
+  create: async (req, res) => {
+    const username = req.body.username;
+    const books_id = req.body.books_id;
 
-          library
-            .save()
-            .then(() => resolve(response.LibraryMessage('Book has been added to library')))
-            .catch(() => reject(response.ErrorMessage('Failed to add book to library')));
-        }
-      })
-      .catch(() => reject(response.Error));
-  });
-};
+    const book = new Library({
+      user: username,
+      book: books_id
+    });
 
-exports.getUserLibrary = (username) => {
-  return new Promise((resolve, reject) => {
-    Library.find({ username })
-      .populate('books_id')
-      .exec()
-      .then(savedLibrary => {
-        resolve(savedLibrary);
-      })
-      .catch(error => {
-        reject(error);
-      });
-  });
+    try {
+      const libraryData = await book.save();
+      return res.json(libraryData);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  },
+
+  getLibrary: async (req, res) => {
+    const username = req.body.username;
+
+    try {
+      const libraryData = await Library.find({ user: username }).populate('book');
+      const responseData = {
+        library: libraryData
+      };
+      res.json(responseData);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  }
 };

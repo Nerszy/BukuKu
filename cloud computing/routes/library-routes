@@ -1,20 +1,12 @@
-const libraryControllers = require('../controllers/library-controllers');
-const routes = require('express').Router();
+const express = require('express');
+const router = express.Router();
 
-routes.post('/addToLibrary', (req, res) => {
-  const { username, books_id } = req.body;
+const libraryController = require('../controllers/library-controllers');
 
-  libraryControllers.addBookToLibrary(username, books_id)
-    .then(result => res.json(result))
-    .catch(err => res.json(err));
-});
+// Route untuk membuat entri baru di library
+router.post('/library/create', libraryController.create);
 
-routes.get('/user/:username', (req, res) => {
-  const { username } = req.params;
+// Route untuk mendapatkan data library berdasarkan username
+router.get('/populate', libraryController.getLibrary);
 
-  libraryControllers.getUserLibrary(username)
-    .then(result => res.json(result))
-    .catch(err => res.json(err));
-});
-
-module.exports = routes;
+module.exports = router;

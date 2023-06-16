@@ -1,20 +1,11 @@
-const historyControllers = require ('../controllers/history-controllers')
-const routes = require('express').Router()
+const express = require('express');
+const router = express.Router();
+const historyController = require('../controllers/history-controllers');
 
-    routes.post('/add', (req, res) => {
-        const { username, books_id } = req.body
+// Mendapatkan semua history baca buku beserta data buku yang terkait
+router.get('/getHistories', historyController.getAllHistories);
 
-        historyControllers.addToHistory(username, books_id)
-        .then(result => res.json(result))
-        .catch(err => res.json(err))
-    })
+// Membuat atau memperbarui history
+router.post('/addHistories', historyController.updateHistory);
 
-    routes.get('/:username', (req, res) => {
-        const { username } = req.params
-
-        historyControllers.getHistory(username)
-            .then(result => res.json(result))
-            .catch(err => res.json(err))
-    })
-
-module.exports = routes
+module.exports = router;

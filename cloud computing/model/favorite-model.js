@@ -1,18 +1,19 @@
 const mongoose = require('mongoose');
 
-// Definisikan skema untuk buku favorit
+// Define the schema for favorite books
 const favoriteBookSchema = new mongoose.Schema({
-  title: {
+  username: {
     type: String,
     required: true
   },
-  author: {
-    type: String,
+  book: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Product',
     required: true
   }
 });
 
-// Buat model berdasarkan skema buku favorit
-const FavoriteBookModel = mongoose.model('FavoriteBook', favoriteBookSchema);
+// Create the model based on the favorite book schema
+const FavoriteBook = mongoose.model('FavoriteBook', favoriteBookSchema);
 
-module.exports = FavoriteBookModel;
+module.exports = FavoriteBook;

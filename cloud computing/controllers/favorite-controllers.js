@@ -2,21 +2,28 @@ const FavoriteBook = require("../model/favorite-model");
 
 const getFavoriteBooks = async (req, res) => {
   try {
-    const favoriteBooks = await FavoriteBook.find({});
-    return res.status(200).json(favoriteBooks);
+    const { username } = req.body;
+
+    const favoriteBooks = await FavoriteBook.find({ username }).populate('book');
+
+    const responseData = {
+      Favorite: favoriteBooks
+    }
+
+    return res.status(200).json(responseData);
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
   }
 };
 
 const addFavoriteBook = async (req, res) => {
-  const { title, author } = req.body;
+  const { username, book } = req.body;
 
-  if (!title || !author) {
-    return res.status(400).json({ error: 'Title and author are required.' });
+  if (!username || !book) {
+    return res.status(400).json({ error: 'Username and book are required.' });
   }
 
-  const newBook = new FavoriteBook({ title, author });
+  const newBook = new FavoriteBook({ username, book });
 
   try {
     await newBook.save();
@@ -27,17 +34,19 @@ const addFavoriteBook = async (req, res) => {
 };
 
 const removeFavoriteBook = async (req, res) => {
-  const { title, author } = req.body;
+  const { username, book } = req.body;
 
-  if (!title || !author) {
-    return res.status(400).json({ error: 'Title and author are required.' });
+  if (!username || !book) {
+    return res.status(400).json({ error: 'Username and book are required.' });
   }
 
   try {
-    const deletedBook = await FavoriteBook.findOneAndDelete({ title, author });
+    const deletedBook = await FavoriteBook.findOneAndDelete({ username, book });
+
     if (!deletedBook) {
       return res.status(404).json({ error: 'Book not found in favorites.' });
     }
+
     return res.status(200).json({ message: 'Book removed from favorites successfully.' });
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });

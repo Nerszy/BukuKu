@@ -22,16 +22,18 @@ app.use(bodyParser.urlencoded({
     limit: '50mb'
 }))
 app.use('/user', require('./routes/user-routes'))
-app.use('/history', require('./routes/history-routes'))
+
+const historyRoutes = require('./routes/history-routes')
+app.use(historyRoutes)
 
 const bookRoutes = require('./routes/book-routes')
 app.use(bookRoutes)
 
 const favoriteRoutes = require('./routes/favorite-routes')
-app.use('/favorite', favoriteRoutes)
+app.use(favoriteRoutes)
 
 const libraryRoutes = require('./routes/library-routes')
-app.use('/library', libraryRoutes)
+app.use(libraryRoutes)
 
 const port = process.env.PORT || 8000
 app.listen(port, () => console.log(`server telah berjalan di ${port}`))

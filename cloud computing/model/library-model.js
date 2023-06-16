@@ -1,13 +1,22 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+const { Schema } = mongoose;
 
-const librarySchema = mongoose.Schema(
-  {
-    username: String,
-    books_id: String,
+const librarySchema = new Schema({
+  user: {
+    type: String,
+    required: true,
   },
-  {
-    timestamps: true,
-  }
-);
+  book: {
+    type: Schema.Types.ObjectId,
+    ref: 'Product', // Pastikan referensi ini sesuai dengan nama model yang benar
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
 
-module.exports = mongoose.model('Library', librarySchema);
+const Library = mongoose.model('Library', librarySchema);
+
+module.exports = Library;

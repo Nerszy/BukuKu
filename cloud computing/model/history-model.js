@@ -1,14 +1,19 @@
 const mongoose = require('mongoose')
 
-const historySchema = mongoose.Schema(
-    {
-        username: String,
-        books_id: String
+const historySchema = mongoose.Schema({
+    username: {
+        type: String,
+        required: true
     },
-    {
-        timestamps: true
-    }
+    books_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+})
 
-)
-
-module.exports = mongoose.model('histories', historySchema)
+module.exports = mongoose.model('histories', historySchema);
