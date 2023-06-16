@@ -2,6 +2,7 @@ package com.dicoding.bukuku.initialbook
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.bukuku.MainActivity
 import com.dicoding.bukuku.databinding.ActivityInitialBookBinding
+import com.dicoding.bukuku.fragment.HomeFragment
 import java.util.*
 
 @Suppress("DEPRECATION")
@@ -82,17 +84,31 @@ class InitialBookActivity : AppCompatActivity() {
 
     private fun onNextButtonClick() {
         val selectedBooks = getSelectedBooks()
-        Toast.makeText(this, listOf(selectedBooks).toString(), Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this, MainActivity::class.java))
+
+        if (selectedBooks.size != 3) {
+            Toast.makeText(this, "Please select 3 books", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putIntegerArrayListExtra(
+            HomeFragment.EXTRA_SELECTED_BOOKS,
+            selectedBooks
+        )
+        startActivity(intent)
         finish()
     }
 
-    private fun getSelectedBooks(): List<Int> {
+
+
+
+    private fun getSelectedBooks(): ArrayList<Int> {
         val selectedBooks = adapters.flatMap { adapter ->
             adapter.getSelectedBookIds()
-        }
+        } as ArrayList<Int>
         return selectedBooks
     }
+
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE

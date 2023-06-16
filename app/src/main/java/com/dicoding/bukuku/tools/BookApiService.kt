@@ -1,16 +1,10 @@
 package com.dicoding.bukuku.tools
 
-import com.dicoding.bukuku.response.AuthorizationResponse
-import com.dicoding.bukuku.response.BookPagingResponse
-import com.dicoding.bukuku.response.BookResponse
-import com.dicoding.bukuku.response.BooksItem
+import com.dicoding.bukuku.RecommendRequest
+import com.dicoding.bukuku.RecommendResponse
+import com.dicoding.bukuku.response.*
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface BookApiService {
     @GET("book")
@@ -49,10 +43,23 @@ interface BookApiService {
         @Field("password") password: String
     ): Call<AuthorizationResponse>
 
-//    @FormUrlEncoded
-//    @POST("login")
-//    fun login(
-//        @Field("username") email: String,
-//        @Field("password") password: String
-//    ): Call<Login>
+    @FormUrlEncoded
+    @POST("library/create")
+    fun postLibrary(
+        @Field("username") username: String,
+        @Field("books_id") books_id: String
+    ): Call<PostLibraryResponse>
+
+
+    @GET("populate")
+    fun getLibrary(
+        @Query("username") username: String
+    ): Call<LibraryResponse>
+}
+
+interface BookRecommendService {
+    @POST("api/recommendations")
+    fun recommendBook(
+        @Body request: RecommendRequest
+    ): Call<RecommendResponse>
 }

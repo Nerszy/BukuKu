@@ -12,14 +12,16 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         return dataStore.data.map { preferences ->
             UserModel(
                 preferences[USERNAME_KEY] ?: "",
+                preferences[EMAIL_KEY] ?: "",
                 preferences[STATE_KEY] ?: false
             )
         }
     }
 
-    suspend fun saveUser(username: String, isLogin: Boolean) {
+    suspend fun saveUser(username: String,email: String, isLogin: Boolean) {
         dataStore.edit { preferences ->
             preferences[USERNAME_KEY] = username
+            preferences[EMAIL_KEY] = email
             preferences[STATE_KEY] = isLogin
             preferences[LAST_LOGIN_TIME_KEY] = System.currentTimeMillis()
         }
@@ -36,6 +38,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
         dataStore.edit { preferences ->
             preferences[STATE_KEY] = false
             preferences[USERNAME_KEY] = ""
+            preferences[EMAIL_KEY] = ""
             preferences[LAST_LOGIN_TIME_KEY] = 0L
             preferences.clear()
         }
@@ -51,6 +54,7 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     companion object {
         private const val SEVEN_DAYS = 604_800_000 // 7 days in milliseconds
         private val USERNAME_KEY = stringPreferencesKey("username")
+        private val EMAIL_KEY = stringPreferencesKey("email")
         private val STATE_KEY = booleanPreferencesKey("state")
         private val LAST_LOGIN_TIME_KEY = longPreferencesKey("last_login_time")
 

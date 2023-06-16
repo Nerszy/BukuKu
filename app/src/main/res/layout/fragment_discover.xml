@@ -1,50 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/discover_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".fragment.DiscoverFragment">
 
-    <SearchView
-        android:id="@+id/sv_search"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_dicover"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/selected_genre_background"
-        android:iconifiedByDefault="false"
-        android:queryHint="@string/i_wanna_read"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
+        <SearchView
+            android:id="@+id/sv_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/selected_genre_background"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/i_wanna_read"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_book"
-        android:layout_width="370dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sv_search"
-        tools:listitem="@layout/item_book_big" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_book"
+            android:layout_width="370dp"
+            android:layout_height="750dp"
+            android:gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_discover"
+            app:spanCount="2"
+            tools:listitem="@layout/item_book_big" />
 
-    <ProgressBar
-        android:id="@+id/pb_recyclerview"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/rv_book"
-        app:layout_constraintStart_toStartOf="@+id/rv_book"
-        app:layout_constraintTop_toTopOf="@+id/rv_book"
-        tools:visibility="visible" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/lv_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:background="@drawable/bg_listview"
+            app:layout_constraintEnd_toEndOf="@+id/sv_search"
+            app:layout_constraintStart_toStartOf="@+id/sv_search"
+            app:layout_constraintTop_toBottomOf="@+id/sv_search"
+            tools:listitem="@layout/list_item_search"/>
+
+        <TextView
+            android:id="@+id/tv_likeit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/poppins"
+            android:text="You might like it..."
+            app:layout_constraintStart_toStartOf="@+id/sv_search"
+            app:layout_constraintTop_toBottomOf="@+id/sv_search" />
+
+        <TextView
+            android:id="@+id/tv_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Recommendation"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_likeit"
+            app:layout_constraintTop_toBottomOf="@+id/tv_likeit" />
+
+        <TextView
+            android:id="@+id/tv_exploremore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/poppins"
+            android:text="Explore more..."
+            app:layout_constraintStart_toStartOf="@+id/tv_recommend"
+            app:layout_constraintTop_toBottomOf="@+id/rv_recommend" />
+
+        <TextView
+            android:id="@+id/tv_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Discover"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_exploremore"
+            app:layout_constraintTop_toBottomOf="@+id/tv_exploremore" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recommend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recommend"
+            tools:listitem="@layout/item_book_row" />
+
+        <ProgressBar
+            android:id="@+id/pb_search"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/lv_search"
+            app:layout_constraintEnd_toEndOf="@+id/lv_search"
+            app:layout_constraintStart_toStartOf="@+id/lv_search"
+            app:layout_constraintTop_toBottomOf="@+id/sv_search"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/pb_recyclerview"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rv_book"
+            app:layout_constraintStart_toStartOf="@+id/rv_book"
+            app:layout_constraintTop_toTopOf="@+id/rv_book"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

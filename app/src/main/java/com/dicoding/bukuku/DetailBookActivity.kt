@@ -1,6 +1,7 @@
 package com.dicoding.bukuku
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -16,11 +17,22 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.dicoding.bukuku.databinding.ActivityDetailBookBinding
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user")
+
 
 class DetailBookActivity : AppCompatActivity() {
 
@@ -30,6 +42,11 @@ class DetailBookActivity : AppCompatActivity() {
 
     private val viewModel: DetailBookViewModel by lazy {
         DetailBookViewModel()
+    }
+    private val postLibrary: LibrrayViewModel by viewModels()
+
+    private val userPreference: UserPreference by lazy {
+        UserPreference.getInstance(this@DetailBookActivity.dataStore)
     }
 
     @SuppressLint("SetTextI18n")
@@ -59,10 +76,14 @@ class DetailBookActivity : AppCompatActivity() {
                     tvSynopsis.text = Html.fromHtml(listBook.synopsis)
                     tvSynopsis.maxLines = Int.MAX_VALUE
                     tvPrice.text = listBook.idr
-                    tvBuy.setOnClickListener {
-                        val browserIntent =
-                            Intent(Intent.ACTION_VIEW, Uri.parse(listBook.urlPlaybook))
-                        startActivity(browserIntent)
+                    lifecycleScope.launch {
+                        val user = userPreference.getUser().first()
+                        tvBuy.setOnClickListener {
+                            val browserIntent =
+                                Intent(Intent.ACTION_VIEW, Uri.parse(listBook.urlPlaybook))
+                            startActivity(browserIntent)
+                            postLibrary.postLibrary(user.username,listBook.id)
+                        }
                     }
                     tvRating.text = "Average Rating: ${listBook.avgRating}"
                     tvIsbn.text = "ISBN: ${listBook.isbn}"

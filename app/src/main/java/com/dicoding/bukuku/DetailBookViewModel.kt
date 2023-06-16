@@ -18,7 +18,6 @@ class DetailBookViewModel: ViewModel() {
                 override fun onResponse(call: Call<BooksItem>, response: Response<BooksItem>) {
                     if (response.isSuccessful) {
                         _book.postValue(response.body())
-                        Log.d("responseBody", response.body().toString())
                     }
                 }
 

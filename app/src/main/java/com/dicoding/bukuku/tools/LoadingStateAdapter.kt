@@ -15,7 +15,7 @@ class LoadingStateAdapter(private val retry: () -> Unit) : LoadStateAdapter<Load
         return LoadingStateViewHolder(binding, retry)
     }
 
-    override fun onBindViewHolder(holder: LoadingStateViewHolder, loadState: LoadState) {
+    override fun onBindViewHolder(holder : LoadingStateViewHolder, loadState: LoadState) {
         holder.bind(loadState)
     }
 

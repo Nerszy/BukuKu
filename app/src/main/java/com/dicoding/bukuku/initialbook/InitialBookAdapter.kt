@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -64,10 +65,24 @@ class InitialBookAdapter : RecyclerView.Adapter<InitialBookAdapter.BookViewHolde
             if (isSelected) {
                 selectedBookIds.remove(book.booksId)
             } else {
-                selectedBookIds.add(book.booksId)
+                if (selectedBookIds.size >= 3) {
+                    Toast.makeText(
+                        holder.itemView.context,
+                        "Anda hanya boleh memilih 3 buku",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    selectedBookIds.add(book.booksId)
+                }
             }
             notifyItemChanged(position)
+
+            // Jika pemilihan buku sudah mencapai 3 dan buku yang dipilih berubah, maka panggil notifyDataSetChanged
+            if (selectedBookIds.size == 3) {
+                notifyDataSetChanged()
+            }
         }
+
     }
 
     fun updateBooks(newBooks: ArrayList<BooksItem>) {

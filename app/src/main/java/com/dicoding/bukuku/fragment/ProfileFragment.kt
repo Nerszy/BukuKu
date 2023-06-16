@@ -15,6 +15,7 @@ import com.dicoding.bukuku.AboutUsActivity
 import com.dicoding.bukuku.UserPreference
 import com.dicoding.bukuku.databinding.FragmentProfileBinding
 import com.dicoding.bukuku.login.LoginActivity
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user")
@@ -41,6 +42,12 @@ class ProfileFragment : Fragment() {
 
         binding.tvLogout.setOnClickListener {
             logoutUser()
+        }
+
+        lifecycleScope.launch {
+            val user = userPreference.getUser().first()
+            binding.tvUsername.text = user.username
+            binding.tvEmail.text = user.email
         }
 
         binding.tvBukuku.paintFlags = binding.tvBukuku.paintFlags or android.graphics.Paint.UNDERLINE_TEXT_FLAG

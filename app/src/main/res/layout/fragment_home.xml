@@ -88,6 +88,7 @@
                 android:fontFamily="@font/poppins"
                 android:text="@string/your_library"
                 android:textSize="18sp"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraint_history" />
@@ -99,6 +100,7 @@
                 android:gravity="center"
                 android:numColumns="2"
                 android:scrollbars="none"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_your_library"
@@ -111,6 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:alpha="0.6"
+                android:visibility="gone"
                 android:fontFamily="@font/poppins"
                 android:text="@string/see_more"
                 android:textStyle="italic"
@@ -130,11 +133,12 @@
                 app:layout_constraintStart_toStartOf="@+id/tv_see_more_library"
                 app:layout_constraintTop_toBottomOf="@id/tv_see_more_library" />
 
-            <GridView
-                android:id="@+id/gv_recommendation"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recommendation"
                 android:layout_width="0dp"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 android:numColumns="2"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -156,7 +160,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/gv_recommendation" />
+                app:layout_constraintTop_toBottomOf="@id/rv_recommendation" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:visibility="gone"

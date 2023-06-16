@@ -44,6 +44,7 @@ class AuthorizationViewModel: ViewModel(){
                         viewModelScope.launch {
                             userPreference.saveUser(
                                 response.body()?.username ?: "",
+                                response.body()?.email ?: "",
                                 true
                             )
                         }
