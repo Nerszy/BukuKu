@@ -1,31 +1,31 @@
 package com.dicoding.bukuku.tools
 
-import com.dicoding.bukuku.R
-import okhttp3.logging.HttpLoggingInterceptor
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
+
 
 object ApiConfig {
+    private val client: OkHttpClient = OkHttpClient.Builder()
+        .connectTimeout(60, TimeUnit.SECONDS)
+        .readTimeout(60, TimeUnit.SECONDS)
+        .writeTimeout(60, TimeUnit.SECONDS)
+        .build()
+    private val retrofitBuilder: Retrofit.Builder = Retrofit.Builder()
+        .addConverterFactory(GsonConverterFactory.create())
+        .client(client)
+
     fun getApiServices(): BookApiService {
-        val loggingInterceptor =
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-        val client = okhttp3.OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
-        val retrofit = Retrofit.Builder()
+        val retrofit = retrofitBuilder
             .baseUrl("https://bukuku-46zlg2v3pa-et.a.run.app/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(client)
             .build()
         return retrofit.create(BookApiService::class.java)
     }
 
     fun getApiServicesRecoomend(): BookRecommendService {
-        val loggingInterceptor =
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-        val client = okhttp3.OkHttpClient.Builder().addInterceptor(loggingInterceptor).build()
-        val retrofit = Retrofit.Builder()
+        val retrofit = retrofitBuilder
             .baseUrl("https://ml-46zlg2v3pa-et.a.run.app/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(client)
             .build()
         return retrofit.create(BookRecommendService::class.java)
     }

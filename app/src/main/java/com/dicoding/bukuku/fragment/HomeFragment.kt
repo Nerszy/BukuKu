@@ -140,7 +140,7 @@ class HomeFragment : Fragment() {
         }
 
         val selectedBooks = arguments?.getIntegerArrayList(EXTRA_SELECTED_BOOKS)
-        val alternativeSelected = arrayListOf(348, 343, 320)
+        val alternativeSelected = arrayListOf(1, 2, 3)
         if (selectedBooks != null && selectedBooks.isNotEmpty()) {
             val recommendRequest = RecommendRequest(selectedBooks)
             recommendViewModel.getRecommendBook(viewLifecycleOwner,recommendRequest)
